@@ -15,7 +15,7 @@ const Sidebar = () => {
   const [close , setClose] = useState<Boolean>(false)
   const path = usePathname();
   return (
-    <aside className={`relative pt-2 ${close?'hidden':"flex"} sm:flex flex-col border border-black h-screen min-w-[18rem]  rounded-e-3xl `}>
+    <aside className={`relative pt-2 ${close?'hidden':"flex"} sm:flex flex-col border border-black h-screen min-w-[18rem]  `}>
       {/* Header  */}
       <div className="block sm:hidden">
         <IoMdClose size={32} className="absolute right-1" onClick={()=>setClose(true)}/>
@@ -25,9 +25,9 @@ const Sidebar = () => {
         <Image
           src={"/anime.jpg"}
           alt="profile"
-          width={280}
-          height={300}
-          className="rounded-full object-cover border max-w-[24rem] max-h-sm
+          width={200}
+          height={200}
+          className="rounded-full object-cover border max-w-[20rem] max-h-[20rem]
            "
         />
         <div className="  rounded-3xl  flex justify-center items-center flex-col">
@@ -39,7 +39,7 @@ const Sidebar = () => {
       </section>
 
       {/* Nav links */}
-      <section className=" flex flex-col p-5 gap-5  bg-blue-900/70 flex-1  rounded-ee-3xl">
+      <section className=" flex flex-col p-5 gap-5  bg-blue-900/70 flex-1 ">
         {/* List of Link */}
         <Link
           href={"/user"}
@@ -75,7 +75,7 @@ const Sidebar = () => {
           <FaHistory size={24} />
           Leave History
         </Link>
-        <Link href={"/login"} className={`bg-black/70   `}>
+        <Link href={"/login"} className={`   `}>
           <BiLogOut size={24} />
           Logout
         </Link>

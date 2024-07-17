@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { bal } from "@/constants/data";
 import { useRouter } from "next/navigation";
 import React from "react";
+import LeaveHistory from "./leaveshistory/page";
 
 const Users = () => {
   const routes = useRouter();
@@ -16,7 +17,7 @@ const Users = () => {
         {/* balaced below  header part */}
         {bal.map((itmes) => (
           <div
-            className="relative min-w-[12rem]  flex flex-col items-center justify-center  sm:p-4  border-black border rounded-xl"
+            className="relative min-w-[12rem]  flex flex-col  justify-center  sm:p-4   border rounded-xl"
           >
             <p className=" font-medium ">{itmes.leaveType}</p>
             <h1 className="text-2xl font-bold">
@@ -34,7 +35,7 @@ const Users = () => {
             </button>
           </div>
         ))}
-        <div className="relative min-w-[12rem]  flex flex-col items-center justify-center  sm:p-4  border-black border rounded-xl">
+        <div className="relative min-w-[12rem]  flex flex-col items-center justify-center  sm:p-4 border rounded-xl">
           {/* total balaced  */}
           <p className=" font-medium ">Total Balance</p>
           <h1 className="text-2xl font-bold">
@@ -58,7 +59,7 @@ const Users = () => {
           {/* recent applied */}
           <h1 className="text-4xl font-bold text-[#010e59]">Recent Applied </h1>
           <p>This is the list of recent applied with in 10 days</p>
-          <ListLeave />
+          <ListLeave/>
         </div>
       </div>
     </section>
