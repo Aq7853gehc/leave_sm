@@ -14,7 +14,8 @@ const Profile = () => {
             Personal Info
           </h2>
           <div className="flex  flex-col gap-1 justify-center">
-            <div className="grid grid-cols-2">
+            {/* Details */}
+            <div className="grid grid-cols-2 ">
               <h1  className="font-semibold">Name</h1>
               <p>{personal.name}</p>
             </div>

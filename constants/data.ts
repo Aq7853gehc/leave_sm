@@ -39,7 +39,7 @@ export const chart: Chart = {
     {
       label: "Leaves",
       data: [10, 25, 15],
-      backgroundColor: ["#5d6dc7", "#a7b2f2", "#010e59"],
+      backgroundColor: ["#fab905", "#15fa05", "#fa0505"],
       hoverOffset: 4,
     },
   ],

@@ -6,7 +6,7 @@ export default function User({ children }: { children: ReactNode }) {
   return (
     <main>
       <Navbar />
-      <div className="flex gap-2 overflow-hidden ">
+      <div className="flex gap-2 overflow-hidden bg-white">
         <Sidebar />
         {children}
       </div>

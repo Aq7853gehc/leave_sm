@@ -55,9 +55,10 @@ export default async function DemoPage() {
   const data = await getData()
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto py-10 ">
       <h1 className="text-4xl font-bold">Leave History</h1>
       <Separator className="mb-5 mt-2"/>
+      
       <DataTable columns={columns} data={data} />
     </div>
   )

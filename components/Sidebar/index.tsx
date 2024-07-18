@@ -10,6 +10,8 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { BiCloset, BiLogOut } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
+import { IoSettingsOutline } from "react-icons/io5";
+import { Separator } from "../ui/separator";
 
 const Sidebar = () => {
   const [close , setClose] = useState<Boolean>(false)
@@ -20,16 +22,18 @@ const Sidebar = () => {
       <div className="block sm:hidden">
         <IoMdClose size={32} className="absolute right-1" onClick={()=>setClose(true)}/>
       </div>
-      <section className="h-1/2 flex flex-col  flex-1 justify-evenly items-center gap-3">
+      <section className="h-[20rem] flex flex-col justify-center gap-2 items-center">
         {/* Profile pic and heading */}
+        <div className="rounded-full w-[200px] h-[200px]">
         <Image
-          src={"/anime.jpg"}
+          src={"/img.jpg"}
           alt="profile"
           width={200}
           height={200}
-          className="rounded-full object-cover border max-w-[20rem] max-h-[20rem]
-           "
+          className="rounded-full w-full h-full object-cover border-black  "
         />
+        </div>
+        
         <div className="  rounded-3xl  flex justify-center items-center flex-col">
           <h1 className="text-3xl md:text-2xl font-semibold">Kamlesh Sahani</h1>
           <p className="text-gray-600 text-xl md:text-base font-medium">
@@ -37,13 +41,14 @@ const Sidebar = () => {
           </p>
         </div>
       </section>
+      <Separator/>
 
       {/* Nav links */}
-      <section className=" flex flex-col p-5 gap-5  bg-blue-900/70 flex-1 ">
+      <section className=" flex flex-col p-5 gap-5  bg-white flex-1 ">
         {/* List of Link */}
         <Link
           href={"/user"}
-          className={`${path === "/user" ? "bg-white text-black" : null}`}
+          className={`${path === "/user" ? "bg-blue-500 text-white" : null}`}
         >
           <LuHome size={24} />
           Dashboard
@@ -51,7 +56,7 @@ const Sidebar = () => {
         <Link
           href={"/user/profile"}
           className={`${
-            path === "/user/profile" ? "bg-white text-black" : null
+            path === "/user/profile" ? "text-white bg-blue-500" : null
           }`}
         >
           <CgProfile size={24} />
@@ -60,7 +65,7 @@ const Sidebar = () => {
         <Link
           href={"/user/leavesrequest"}
           className={`${
-            path === "/user/leavesrequest" ? "bg-white text-black" : null
+            path === "/user/leavesrequest" ? "text-white bg-blue-500" : null
           }`}
         >
           <FaPersonCirclePlus size={24} />
@@ -69,11 +74,17 @@ const Sidebar = () => {
         <Link
           href={"/user/leaveshistory"}
           className={`${
-            path === "/user/leaveshistory" ? "bg-white text-black" : null
+            path === "/user/leaveshistory" ? "bg-blue-500 text-white" : null
           } `}
         >
           <FaHistory size={24} />
           Leave History
+        </Link>
+        <Link href={"/user/setting"} className={` ${
+            path === "/user/setting" ? "bg-blue-500 text-white" : null
+          }  `}>
+        <IoSettingsOutline size={24} />
+          Setting
         </Link>
         <Link href={"/login"} className={`   `}>
           <BiLogOut size={24} />

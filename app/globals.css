@@ -72,9 +72,9 @@
 }
 
 a {
-  @apply text-white;
+  @apply text-black;
 
-  @apply flex gap-2 w-full  border rounded-sm px-4 py-2 truncate;
+  @apply flex gap-2 w-full bg-zinc-200  border rounded-sm px-4 py-2 truncate;
 }
 
 @layer utilities {
