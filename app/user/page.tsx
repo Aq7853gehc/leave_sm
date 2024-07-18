@@ -13,7 +13,7 @@ const Users = () => {
     <section className=" flex flex-col w-full relative h-screen pt-3">
       <h1 className="text-4xl font-bold ">Dashboard</h1>
       <Separator className="mb-2" />
-      <div className="relative flex  h-[15rem] items-center  justify-around  gap-5 w-full overflow-x-scroll  px-4 py-4 no-scrollbar ">
+      <div className="relative flex  h-[15rem] items-center  justify-around  gap-5 w-full   px-4 py-4 no-scrollbar ">
         {/* balaced below  header part */}
         {bal.map((itmes) => (
           <div
@@ -27,7 +27,6 @@ const Users = () => {
               <span>days</span>
             </h1>
             <p className="text-gray-500 text-sm">{itmes.text}</p>
-           
           </div>
         ))}
         <div className="relative min-w-[12rem]  flex flex-col items-center justify-center  sm:p-4 border rounded-xl">
@@ -36,12 +35,11 @@ const Users = () => {
           <h1 className="text-2xl font-bold">
             45 <span>days</span>
           </h1>
-          <p className="text-gray-500 text-sm">forward to next year</p> 
+          <p className="text-gray-500 text-sm">forward to next year</p>
         </div>
       </div>
 
       <div className="flex flex-col lg:flex-row  border  w-full h-full">
-
         <div className="flex flex-col gap-10 min-w-[24rem]  w-full md:w-fit px-4 py-8 shadow-lg">
           {/* Charts of status */}
           <div className="w-full relative">
@@ -53,11 +51,10 @@ const Users = () => {
         <div className="flex-1 flex gap-5 flex-col px-4  py-8">
           {/* recent applied */}
           <div>
-
-          <h1 className="text-4xl font-bold ">Recent Applied </h1>
-          <p>This is the list of recent applied with in 10 days</p>
+            <h1 className="text-4xl font-bold ">Recent Applied </h1>
+            <p>This is the list of recent applied with in 10 days</p>
           </div>
-          <ListLeave className="max-w-xl"/>
+          <ListLeave className="max-w-xl" />
         </div>
       </div>
     </section>
