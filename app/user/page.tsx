@@ -40,7 +40,7 @@ const Users = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row  border  w-full h-full">
-        <div className="flex flex-col gap-10 min-w-[24rem]  w-full md:w-fit px-4 py-8 shadow-lg">
+        <div className="flex flex-col gap-10 min-w-[24rem]   w-full md:w-fit px-4 py-8 shadow-lg">
           {/* Charts of status */}
           <div className="w-full relative">
             <h1 className="text-4xl font-bold ">Status of Leaves</h1>
@@ -54,7 +54,7 @@ const Users = () => {
             <h1 className="text-4xl font-bold ">Recent Applied </h1>
             <p>This is the list of recent applied with in 10 days</p>
           </div>
-          <ListLeave className="max-w-xl" />
+          <ListLeave className="w-full" />
         </div>
       </div>
     </section>
