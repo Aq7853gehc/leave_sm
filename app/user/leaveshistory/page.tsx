@@ -8,7 +8,6 @@ import { getData } from "@/constants/leavesdata";
 
 export default async function DemoPage() {
   const data = await getData();
-  const approve = data.filter((d) => d.status === "approved");
   return (
     <div className="container mx-auto py-10 min-h-screen ">
       <h1 className="text-4xl font-bold">Leave History</h1>
