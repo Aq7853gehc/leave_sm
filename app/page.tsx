@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
       home
-      {/* {redirect("/user")} */}
+      {redirect("/user")}
     </div>
   )
 }

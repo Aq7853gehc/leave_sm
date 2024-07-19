@@ -3,7 +3,7 @@ import React from 'react'
  const LeaveRequest = () => {
     return (
 <div className='w-full h-full flex justify-center items-center'>
-        <div className="flex items-center justify-center flex-col p-12">
+        <div className="flex items-center justify-center flex-col px-12 py-8">
             <div className='flex w-full justify-center items-center font-bold mb-3'>
                 <h1 className='text-3xl'>Leave Application</h1>
             </div>
