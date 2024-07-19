@@ -9,18 +9,42 @@ import { ColumnDef } from "@tanstack/react-table"
 export const columns: ColumnDef<LeavesHistory>[] = [
   {
     accessorKey: "type",
-    header: "Type",
+    header: ()=>(<div className="font-bold text-black">
+      Type
+    </div>),
   },
   {
     accessorKey: "status",
-    header: "Status",
+    header: ()=>(<div className="font-bold text-black">
+      Status
+    </div>),
+    cell:({row})=>(
+
+      <div className={`text-red-500`}>{row.getValue("status")==="pending"?<p className="text-yellow-400">{row.getValue("status")}</p>:row.getValue("status")==="approved"?<p className="text-green-500">{row.getValue("status")}</p>:<p className="text-red-500">{row.getValue("status")}</p>}</div>
+    ) 
   },
   {
     accessorKey: "startdate",
-    header: "Start Date",
+    header: ()=>(<div className="font-bold text-black">
+      Start Date
+    </div>),
+    
   },
   {
     accessorKey: "enddate",
-    header: "End Date",
+    header: ()=>(<div className="font-bold text-black">
+      End Date
+    </div>),
+    
   },
+  {
+    accessorKey: "duration",
+    header: ()=>(<div className="font-bold text-black">
+      Duration
+    </div>),
+    cell:({row})=>(
+      <div className="">{row.getValue("duration")}</div>
+    )
+  },
+
 ]

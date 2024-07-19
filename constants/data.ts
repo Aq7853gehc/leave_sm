@@ -49,7 +49,7 @@ export const personal = {
   name: "Kamlesh Sahani",
   designation: "Software Engineer",
   id: 12356,
-  email: "kamlesh.sahani@techsailors.com",
+  email: "kamlesh.sahani@gmail.com",
   phone: "+91 1234567890",
   address: "Noida",
   dob: "1998-01-01",

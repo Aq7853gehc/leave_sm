@@ -22,11 +22,11 @@ const Sidebar = () => {
       <div className="block sm:hidden">
         <IoMdClose size={32} className="absolute right-1" onClick={()=>setClose(true)}/>
       </div>
-      <section className="h-[20rem] flex flex-col justify-center gap-2 items-center">
+      <section className="h-[20rem] flex flex-col justify-center gap-2 flex-1 items-center">
         {/* Profile pic and heading */}
         <div className="rounded-full w-[200px] h-[200px]">
         <Image
-          src={"/img.jpg"}
+          src={"/image_profile.jpg"}
           alt="profile"
           width={200}
           height={200}
@@ -35,7 +35,8 @@ const Sidebar = () => {
         </div>
         
         <div className="  rounded-3xl  flex justify-center items-center flex-col">
-          <h1 className="text-3xl md:text-2xl font-semibold">Kamlesh Sahani</h1>
+          <p className="text-blue-400 font-light">Edit</p>
+          <h1 className="text-3xl md:text-2xl font-semibold">Aquib Razi</h1>
           <p className="text-gray-600 text-xl md:text-base font-medium">
             ID 123-456-789
           </p>

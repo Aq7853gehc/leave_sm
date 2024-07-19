@@ -10,16 +10,16 @@ import LeaveHistory from "./leaveshistory/page";
 const Users = () => {
   const routes = useRouter();
   return (
-    <section className=" flex flex-col w-full relative h-screen pt-3">
-      <h1 className="text-4xl font-bold ">Dashboard</h1>
+    <section className=" flex flex-col w-full relative h-screen pt-2">
+      <div className="flex justify-between items-center ">
+        <h1 className="text-4xl font-bold ">Dashboard</h1>
+        <p onClick={() => routes.push("/user/leavesrequest")} className="text-sm border p-2 cursor-pointer rounded-lg  bg-blue-500 text-white w-fit mr-2">Apply for leaves</p>
+      </div>
       <Separator className="mb-2" />
       <div className="relative flex  h-[15rem] items-center  justify-around  gap-5 w-full   px-4 py-4 no-scrollbar ">
         {/* balaced below  header part */}
         {bal.map((itmes) => (
-          <div
-            className="relative min-w-[10rem]  flex flex-col  justify-center  sm:p-4 transition-all duration-150  border rounded-xl cursor-pointer hover:shadow-lg hover:border-black"
-            onClick={() => routes.push("/user/leavesrequest")}
-          >
+          <div className="relative min-w-[10rem]  flex flex-col  justify-center  sm:p-4 transition-all duration-150  border rounded-xl cursor-pointer hover:shadow-lg hover:border-black">
             <p className=" font-medium ">{itmes.leaveType}</p>
             <h1 className="text-2xl font-bold">
               {itmes.used} /{" "}

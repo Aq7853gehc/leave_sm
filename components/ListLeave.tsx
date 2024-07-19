@@ -5,9 +5,9 @@ import { cn } from '@/lib/utils'
 import React from 'react'
 
 const ListLeave = async({className}:{className:string}) => {
-  const data = await getData()
+  const data = await (await getData())
   return (
-    <div className={cn("py-5", className)}>
+    <div className={cn("py-5 max-h-screen pb-10", className)}>
       <DataTable columns={columns} data={data}/>
     </div>
   )

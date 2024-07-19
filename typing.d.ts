@@ -19,6 +19,7 @@ type LeavesHistory = {
   id: string;
   type: string;
   status: "pending" | "approved" | "cancel";
-  startdate: string
-  enddate: string
+  startdate: string;
+  enddate:string
+  duration:number
 };
