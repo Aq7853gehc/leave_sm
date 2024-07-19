@@ -44,13 +44,13 @@ export default async function DemoPage() {
             data={data.filter((d) => d.status === "approved")}
           />
         </TabsContent>
-        <TabsContent value="pending" className="border rounded-md no-scrollbar">
+        <TabsContent value="pending" className=" max-h-[110vh] overflow-scroll border rounded-md no-scrollbar">
           <DataTable
             columns={columns}
             data={data.filter((d) => d.status === "pending")}
           />
         </TabsContent>
-        <TabsContent value="cancel" className="border rounded-md no-scrollbar">
+        <TabsContent value="cancel" className=" max-h-[110vh] overflow-scroll border rounded-md no-scrollbar">
           <DataTable
             columns={columns}
             data={data.filter((d) => d.status === "cancel")}
