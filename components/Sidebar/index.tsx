@@ -17,7 +17,7 @@ const Sidebar = () => {
   const [close , setClose] = useState<Boolean>(false)
   const path = usePathname();
   return (
-    <aside className={`relative pt-2 ${close?'hidden':"flex"} sm:flex flex-col border border-black h-screen min-w-[18rem]  `}>
+    <aside className={`relative pt-2 ${close?'hidden':"flex"} sm:flex flex-col border h-screen min-w-[18rem]  `}>
       {/* Header  */}
       <div className="block sm:hidden">
         <IoMdClose size={32} className="absolute right-1" onClick={()=>setClose(true)}/>
