@@ -1,18 +1,20 @@
+import { Separator } from '@/components/ui/separator'
 import React from 'react'
 
  const LeaveRequest = () => {
     return (
-<div className='w-full h-full flex justify-center items-center'>
-        <div className="flex items-center justify-center flex-col px-12 py-8">
-            <div className='flex w-full justify-center items-center font-bold mb-3'>
-                <h1 className='text-3xl'>Leave Application</h1>
-            </div>
-            <div className="mx-auto w-full max-w-[550px] p-5 border-2 rounded-lg border-gray-300 bg-white">
+<div className='h-screen w-full flex  flex-col '>
+<h1 className="text-4xl font-bold ">Leaves Request</h1>
+<p className='text-base text-gray-500'>Here apply for leaves</p>
+      <Separator className="mb-1" />
+        <div className="flex w-full h-full items-center  flex-col">
+           
+            <div className="mx-auto w-full max-w-md p-3 border-2 rounded-lg border-gray-300 bg-white">
                 <form action="https://formbold.com/s/FORM_ID" method="POST">
-                    <div className="mb-5">
+                    <div className="mb-3">
                         <label
                             htmlFor=''
-                            className="mb-3 block text-base font-medium text-[#07074D]"
+                            className="mb-1 block text-base font-medium text-[#07074D]"
                         >
                             Leave Types
                         </label>
@@ -37,7 +39,7 @@ import React from 'react'
                             <div className="mb-5">
                                 <label
                                     htmlFor=''
-                                    className="mb-3 block text-base font-medium text-[#07074D]"
+                                    className="mb-1 block text-base font-medium text-[#07074D]"
                                 >
                                     Start Date
                                 </label>
@@ -53,7 +55,7 @@ import React from 'react'
                             <div className="mb-5">
                                 <label
                                     htmlFor=''
-                                    className="mb-3 block text-base font-medium text-[#07074D]"
+                                    className="mb-1 block text-base font-medium text-[#07074D]"
                                 >
                                     End Date
                                 </label>
@@ -70,7 +72,7 @@ import React from 'react'
                     <div className="mb-5">
                         <label
                             htmlFor=''
-                            className="mb-3 block text-base font-medium text-[#07074D]"
+                            className="mb-1 block text-base font-medium text-[#07074D]"
                         >
                             Alternate  Phone Number
                         </label>
@@ -82,10 +84,10 @@ import React from 'react'
                             className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md"
                         />
                     </div>
-                    <div className="mb-5">
+                    <div className="mb-2">
                         <label
                             htmlFor=''
-                            className="mb-3 block text-base font-medium text-[#07074D]"
+                            className="mb-1 block text-base font-medium text-[#07074D]"
                         >
                             Alternate Email Address
                         </label>
@@ -97,20 +99,20 @@ import React from 'react'
                             className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md"
                         />
                     </div>
-                    <div className="mb-5 pt-3">
+                    <div className="mb-2 pt-3">
                         <label
-                            className="mb-5 block text-base text-[#07074D] sm:text-xl"
+                            className="mb-2 block text-base text-[#07074D] sm:text-xl"
                         >
                             Reason for Leave
                         </label>
                         <div className="-mx-3 flex flex-wrap">
 
-                            <div className="w-full px-3 sm:w-1/2">
+                            <div className="w-full px-3 sm:w-full">
 
                                 <textarea
                                     placeholder="Reason...."
 
-                                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md"
+                                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-2 text-base font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md"
                                 />
                             </div>
                         </div>
@@ -120,14 +122,14 @@ import React from 'react'
                     <div className='flex flex-col gap-5'>
                         <div>
                             <button
-                                className="hover:bg-transparent hover:text-black hover:border-2 hover:border-gray-400 w-full rounded-md bg-blue-600 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                                className="hover:bg-transparent transition-all hover:text-black hover:border-2 hover:border-gray-400 w-full rounded-md bg-blue-600 py-3 px-8 text-center text-base font-semibold text-white outline-none"
                             >
                                 Submit Request
                             </button>
                         </div>
                         <div>
                             <button
-                                className="hover:bg-blue-600 hover:text-white w-full  rounded-md py-3 px-8 text-center text-base border-2 font-semibold border-gray-400"
+                                className="hover:shadow-lg  w-full transition-all rounded-md py-3 px-8 text-center text-base border-2 font-semibold border-gray-400"
                             >
                                 Cancel Request
                             </button>

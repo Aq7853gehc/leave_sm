@@ -11,11 +11,11 @@ const Users = () => {
   const routes = useRouter();
   return (
     <section className=" flex flex-col w-full relative h-screen pt-2">
-      <div className="flex justify-between items-center ">
+      <div className="flex justify-between items-center px-4 ">
         <h1 className="text-4xl font-bold ">Dashboard</h1>
-        <p onClick={() => routes.push("/user/leavesrequest")} className="text-sm border p-2 cursor-pointer rounded-lg  bg-blue-500 text-white w-fit mr-2">Apply for leaves</p>
+        <p onClick={() => routes.push("/user/leavesrequest")} className="text-sm border p-2 cursor-pointer rounded-lg  bg-blue-500 text-white w-fit">Apply for leaves</p>
       </div>
-      <Separator className="mb-2" />
+      <Separator className="my-2" />
       <div className="relative flex  h-[15rem] items-center  justify-around  gap-5 w-full   px-4 py-4 no-scrollbar ">
         {/* balaced below  header part */}
         {bal.map((itmes) => (
@@ -40,7 +40,7 @@ const Users = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row  border  w-full h-full">
-        <div className="flex flex-col gap-10 min-w-[24rem]   w-full md:w-fit px-4 py-8 shadow-lg">
+        <div className="flex flex-col gap-10 min-w-[24rem]   w-full md:w-fit px-4 py-4">
           {/* Charts of status */}
           <div className="w-full relative">
             <h1 className="text-4xl font-bold ">Status of Leaves</h1>
@@ -48,7 +48,7 @@ const Users = () => {
           </div>
           <ChartDemo className="md:w-[30rem] md:h-[25rem] " />
         </div>
-        <div className="flex-1 flex gap-5 flex-col px-4  py-8">
+        <div className="flex-1 flex gap-5 flex-col px-4  py-4">
           {/* recent applied */}
           <div>
             <h1 className="text-4xl font-bold ">Recent Applied </h1>

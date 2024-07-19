@@ -1,7 +1,7 @@
 export async function getData(): Promise<LeavesHistory[]> {
   return [
     {
-      id: "1",
+      id: 1,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -9,7 +9,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "2",
+      id: 2,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -17,7 +17,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "3",
+      id: 3,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -25,7 +25,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "4",
+      id: 4,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -33,7 +33,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "5",
+      id: 5,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -41,7 +41,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "6",
+      id: 6,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -49,7 +49,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "7",
+      id: 7,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -57,7 +57,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "8",
+      id: 8,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -65,7 +65,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "9",
+      id: 9,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -73,7 +73,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "10",
+      id: 10,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -81,7 +81,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "11",
+      id: 11,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -89,7 +89,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "12",
+      id: 12,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -97,7 +97,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "13",
+      id: 13,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -105,7 +105,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "14",
+      id: 14,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -113,7 +113,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "15",
+      id: 15,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -121,7 +121,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "16",
+      id: 16,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -129,7 +129,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "17",
+      id: 17,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -137,7 +137,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "18",
+      id: 18,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -145,7 +145,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "19",
+      id: 19,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -153,7 +153,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "20",
+      id: 20,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -161,7 +161,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "21",
+      id: 21,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -169,7 +169,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "22",
+      id: 22,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -177,7 +177,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "23",
+      id: 23,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -185,7 +185,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "24",
+      id: 24,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -193,7 +193,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "25",
+      id: 25,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -201,7 +201,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "26",
+      id: 26,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -209,7 +209,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "27",
+      id: 27,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -217,7 +217,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "28",
+      id: 28,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -225,7 +225,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "29",
+      id: 29,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -233,7 +233,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "30",
+      id: 30,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -241,7 +241,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "31",
+      id: 31,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -249,7 +249,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "32",
+      id: 32,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -257,7 +257,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "33",
+      id: 33,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -265,7 +265,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "34",
+      id: 34,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -273,7 +273,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "35",
+      id: 35,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -281,7 +281,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "36",
+      id: 36,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -289,7 +289,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "37",
+      id: 37,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -297,7 +297,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "38",
+      id: 38,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -305,7 +305,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "39",
+      id: 39,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -313,7 +313,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "40",
+      id: 40,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -321,7 +321,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "41",
+      id: 41,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -329,7 +329,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "42",
+      id: 42,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -337,7 +337,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "43",
+      id: 43,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -345,7 +345,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "44",
+      id: 44,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -353,7 +353,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "45",
+      id: 45,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -361,7 +361,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "46",
+      id: 46,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -369,7 +369,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "47",
+      id: 47,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",
@@ -377,7 +377,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "48",
+      id: 48,
       type: "Sick Leave",
       status: "cancel",
       startdate: "2023-05-01",
@@ -385,7 +385,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "49",
+      id: 49,
       type: "Sick Leave",
       status: "pending",
       startdate: "2023-05-01",
@@ -393,7 +393,7 @@ export async function getData(): Promise<LeavesHistory[]> {
       duration: 5,
     },
     {
-      id: "50",
+      id: 50,
       type: "Sick Leave",
       status: "approved",
       startdate: "2023-05-01",

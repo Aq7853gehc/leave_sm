@@ -8,7 +8,7 @@ const ListLeave = async({className}:{className:string}) => {
   const data = await (await getData())
   return (
     <div className={cn("py-5 max-h-screen pb-10", className)}>
-      <DataTable columns={columns} data={data}/>
+      <DataTable columns={columns} data={data.filter(d=>d.id<8)}/>
     </div>
   )
 }

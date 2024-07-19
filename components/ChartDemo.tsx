@@ -10,10 +10,12 @@ ChartJS.register(
 )
 
 const ChartDemo = ({className}:{className:string}) => {
-    const option = {}
+    const option = {
+      
+    }
   return (
     <div className={`${className}`}>
-        <Doughnut data={chart} options={option}></Doughnut>
+        <Doughnut data={chart} options={option} ></Doughnut>
     </div>
   )
 }
