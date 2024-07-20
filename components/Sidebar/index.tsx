@@ -30,14 +30,17 @@ const Sidebar = () => {
         close ? "hidden" : "flex"
       } sm:flex flex-col border h-screen min-w-[18rem]  shadow`}
     >
-      {/* Header  */}
-      <div className="block sm:hidden">
-        <IoMdClose
-          size={32}
-          className="absolute right-1"
-          onClick={() => setClose(true)}
-        />
-      </div>
+    
+      
+      {/* Header 
+      // <div className="block sm:hidden">
+      //   <IoMdClose
+      //     size={32}
+      //     className="absolute right-1"
+      //     onClick={() => setClose(true)}
+      //   />
+      // </div> */}
+ 
       <section className="h-[20rem] flex flex-col justify-center gap-2 flex-1 items-center">
         {/* Profile pic and heading */}
         <div className="rounded-full w-[200px] h-[200px]">
@@ -123,7 +126,9 @@ const Sidebar = () => {
         </Link>
       </section>
     </aside>
+  
   );
 };
 
 export default Sidebar;
+
