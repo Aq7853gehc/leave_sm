@@ -61,8 +61,8 @@ const ProfileAI = () => {
     <div>
       <div className="max-h-[110vh] ">
         
-        <div className="mb-3 border  p-4 shadow rounded">
-          <h2 className="text-2xl font-bold text-blue-600">Personal Information</h2>
+        <div className="mb-3 border p-2 sm:p-4 shadow rounded">
+          <h2 className="sm:text-2xl text-1xl font-bold text-blue-600">Personal Information</h2>
           <div className="flex mb-2">
             <span className="w-1/3 text-gray-600">Name:</span>
             <span className="w-2/3">
@@ -70,8 +70,8 @@ const ProfileAI = () => {
             </span>
           </div>
           <div className="flex mb-2">
-            <span className="w-1/3 text-gray-600">Date of Birth:</span>
-            <span className="w-2/3">{dateFormat(profile.personal.dob)}</span>
+            <span className="sm:w-1/3 w- text-gray-600">Date of Birth:</span>
+            <span className="sm:w-2/3">{dateFormat(profile.personal.dob)}</span>
           </div>
           <div className="flex mb-2">
             <span className="w-1/3 text-gray-600">Gender:</span>
@@ -100,10 +100,10 @@ const ProfileAI = () => {
         </div>
 
         <div className="mb-3 border shadow p-4 rounded">
-          <h2 className="text-2xl font-bold text-blue-600">Professional Information</h2>
-          <div className="flex mb-2">
-            <span className="w-1/3 text-gray-600">Department ID:</span>
-            <span className="w-2/3">{profile.professional.departmentId}</span>
+          <h2 className="sm:text-2xl text-1xl font-bold text-blue-600">Professional Information</h2>
+          <div className="flex mb-2 sm:flex-row flex-col  gap-1">
+            <span className="s:w-1/3 w-ful  text-gray-600">Department ID:</span>
+            <span className="s:w-2/3 w-full">{profile.professional.departmentId}</span>
           </div>
           <div className="flex mb-2">
             <span className="w-1/3 text-gray-600">Designation:</span>
@@ -122,7 +122,7 @@ const ProfileAI = () => {
         </div>
 
         <div className="mb-3 border shadow p-4 rounded ">
-          <h2 className="text-2xl font-bold  text-blue-600">Experience Information</h2>
+          <h2 className="sm:text-2xl text-1xl font-bold  text-blue-600">Experience Information</h2>
           {profile.experience.map((experience, index) => (
             <div key={index} className="mb-4">
               <h3 className="text-lg font-bold mb-1">
@@ -143,7 +143,7 @@ const ProfileAI = () => {
         </div>
 
         <div className="mb-3 border shadow p-4 rounded">
-          <h2 className="text-2xl font-bold  text-blue-600">Education Information</h2>
+          <h2 className="sm:text-2xl text-1xl font-bold  text-blue-600">Education Information</h2>
           <div className="flex mb-2">
             <span className="w-1/3 text-gray-600">HighestQualification:</span>
             <span className="w-2/3">

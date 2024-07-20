@@ -14,7 +14,7 @@ export default function User({ children }: { children: ReactNode }) {
           show ?
             <div className="flex">
               <Sidebar />
-              <Ellipsis className="z-30 absolute left-[13%] top-[2%]" onClick={() => setShow(!show)} />
+              <Ellipsis className="z-30 relative left-[-8%]" onClick={() => setShow(!show)} />
 
             </div>
             : <IoMenu className="text-3xl mt-4 ml-5" onClick={() => setShow(!show)} />
