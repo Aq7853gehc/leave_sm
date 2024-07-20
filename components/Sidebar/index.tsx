@@ -26,9 +26,7 @@ const Sidebar = () => {
   const path = usePathname();
   return (
     <aside
-      className={`relative pt-2 ${
-        close ? "hidden" : "flex"
-      } sm:flex flex-col border h-screen min-w-[18rem]  shadow`}
+      className={`relative pt-2  sm:flex flex-col border h-screen min-w-[18rem]  shadow`}
     >
     
       
