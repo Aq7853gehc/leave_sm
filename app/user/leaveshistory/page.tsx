@@ -16,9 +16,12 @@ export default async function DemoPage() {
             This page is take the history of last years{" "}
           </p>
         </div>
-        <h2 className="text-2xl font-semibold">
+        {/* <h2 className="text-2xl font-semibold">
           Balance: <span className="text-2xl font-medium">43 days</span>
-        </h2>
+        </h2> */}
+        <div>
+          <button className="bg-blue-500 p-3 rounded-lg text-white">View Balance</button>
+        </div>
       </div>
       <Separator className="mb-2 mt-2" />
       <Tabs defaultValue="all" className="">

@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { BiCloset, BiLogOut } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
+import { Weight } from 'lucide-react';
 import { Separator } from "../ui/separator";
 import {
   Popover,
@@ -101,6 +102,14 @@ const Sidebar = () => {
           Leave Request
         </Link>
         <Link
+          href={"/user/leavebalance"}
+          className={`${path === "/user/leavebalance" ? "text-white bg-blue-500" : null
+            }`}
+        >
+          <Weight size={24} />
+          Leave Balance
+        </Link>
+        <Link
           href={"/user/leaveshistory"}
           className={`${
             path === "/user/leaveshistory" ? "bg-blue-500 text-white" : null
@@ -109,6 +118,7 @@ const Sidebar = () => {
           <FaHistory size={24} />
           Leave History
         </Link>
+        
         <Link
           href={"/user/setting"}
           className={` ${
