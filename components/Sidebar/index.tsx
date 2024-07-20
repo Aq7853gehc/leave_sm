@@ -12,37 +12,64 @@ import { BiCloset, BiLogOut } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Separator } from "../ui/separator";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Input } from "../ui/input";
+import { Label } from "@/components/ui/label"
+
 
 const Sidebar = () => {
-  const [close , setClose] = useState<Boolean>(false)
+  const [close, setClose] = useState<Boolean>(false);
   const path = usePathname();
   return (
-    <aside className={`relative pt-2 ${close?'hidden':"flex"} sm:flex flex-col border h-screen min-w-[18rem]  `}>
+    <aside
+      className={`relative pt-2 ${
+        close ? "hidden" : "flex"
+      } sm:flex flex-col border h-screen min-w-[18rem]  `}
+    >
       {/* Header  */}
       <div className="block sm:hidden">
-        <IoMdClose size={32} className="absolute right-1" onClick={()=>setClose(true)}/>
+        <IoMdClose
+          size={32}
+          className="absolute right-1"
+          onClick={() => setClose(true)}
+        />
       </div>
       <section className="h-[20rem] flex flex-col justify-center gap-2 flex-1 items-center">
         {/* Profile pic and heading */}
         <div className="rounded-full w-[200px] h-[200px]">
-        <Image
-          src={"/image_profile.jpg"}
-          alt="profile"
-          width={200}
-          height={200}
-          className="rounded-full w-full h-full object-cover border-black  "
-        />
+          <Image
+            src={"/image_profile.jpg"}
+            alt="profile"
+            width={200}
+            height={200}
+            className="rounded-full w-full h-full object-cover border-black  "
+          />
         </div>
-        
+
         <div className="  rounded-3xl  flex justify-center items-center flex-col">
-          <p className="text-blue-400 font-light">Edit</p>
+          <Popover >
+            <PopoverTrigger className="text-blue-500 text-sm">Edit</PopoverTrigger>
+            <PopoverContent className="max-w-xs border-2" >
+              <div className="flex max-w-xs w-full bg-transparent ">
+                <div className="grid w-full max-w-sm items-center gap-1.5 bg-transparent">
+                  <Label>Profile Pic</Label>
+                  <Input id="picture" type="file" />
+                </div>
+              </div>
+            </PopoverContent>
+          </Popover>
+
           <h1 className="text-3xl md:text-2xl font-semibold">Aquib Razi</h1>
           <p className="text-gray-600 text-xl md:text-base font-medium">
             ID 123-456-789
           </p>
         </div>
       </section>
-      <Separator/>
+      <Separator />
 
       {/* Nav links */}
       <section className=" flex flex-col p-5 gap-5  bg-white flex-1 ">
@@ -81,10 +108,13 @@ const Sidebar = () => {
           <FaHistory size={24} />
           Leave History
         </Link>
-        <Link href={"/user/setting"} className={` ${
+        <Link
+          href={"/user/setting"}
+          className={` ${
             path === "/user/setting" ? "bg-blue-500 text-white" : null
-          }  `}>
-        <IoSettingsOutline size={24} />
+          }  `}
+        >
+          <IoSettingsOutline size={24} />
           Setting
         </Link>
         <Link href={"/login"} className={`   `}>
