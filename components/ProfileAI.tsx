@@ -59,9 +59,9 @@ const dateFormat = (dateString: string) => {
 const ProfileAI = () => {
   return (
     <div>
-      <div className="max-h-[90vh] overflow-scroll no-scrollbar">
+      <div className="max-h-[92vh] overflow-scroll no-scrollbar">
         
-        <div className="mb-3 border shadow p-1 rounded">
+        <div className="mb-3 border shadow sm:p-2 sm:pl-8 p-2 rounded">
           <h2 className="text-2xl font-bold text-blue-600">Personal Information</h2>
           <div className="flex mb-2">
             <span className="sm:w-1/3 w-3/4 text-gray-600">Name:</span>

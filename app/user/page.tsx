@@ -76,13 +76,13 @@ import LeaveHistory from "./leaveshistory/page";
 const Users = () => {
   const routes = useRouter();
   return (
-    <section className=" flex flex-col gap-5  w-full pt-2">
+    <section className=" flex flex-col  w-full pt-2 h-[92vh]">
       <div className="flex sm:flex-row justify-between items-center sm:pr-3 flex-col sm:px-4 pr-5">
-        <h1 className="sm:text-4xl mb-2 text-3xl font-bold ">Dashboard</h1>
+        <h1 className="sm:text-4xl  text-3xl font-bold ">Dashboard</h1>
         <p onClick={() => routes.push("/user/leavesrequest")} className="text-sm border p-2 cursor-pointer rounded-lg  bg-blue-500 text-white w-fit">Apply for leaves</p>
       </div>
       <Separator className="my-2" />
-      <div className="relative flex flex-wrap  items-center  justify-around  gap-5 w-full   pr-7 no-scrollbar ">
+      <div className="relative flex flex-wrap items-center  justify-around  gap-5 w-full   pr-7 no-scrollbar ">
         {/* balaced below  header part */}
         {bal.map((itmes) => (
           <div className="relative min-w-[10rem]  flex flex-col  justify-center  p-4 transition-all duration-150  border rounded-xl cursor-pointer hover:shadow-lg hover:border-black">
@@ -105,7 +105,7 @@ const Users = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row  border  w-full h-full">
+      <div className="flex flex-col lg:flex-row pt-2 border  w-full h-full">
         <div className="flex flex-col gap-10 min-w-[24rem]   w-full md:w-fit px-4 py-4">
           {/* Charts of status */}
           <div className="w-full relative">

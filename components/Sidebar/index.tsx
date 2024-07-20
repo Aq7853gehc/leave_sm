@@ -4,7 +4,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { FaHistory } from "react-icons/fa";
-import { FaPersonCirclePlus } from "react-icons/fa6";
 import { LuHome } from "react-icons/lu";
 import { usePathname } from "next/navigation";
 import {  BiLogOut } from "react-icons/bi";
@@ -17,6 +16,7 @@ import {
 } from "@/components/ui/popover";
 import { Input } from "../ui/input";
 import { Label } from "@/components/ui/label"
+import { Plus } from "lucide-react";
 
 
 const Sidebar = () => {
@@ -95,7 +95,7 @@ const Sidebar = () => {
             path === "/user/leavesrequest" ? "text-white bg-blue-500" : null
           }`}
         >
-          <FaPersonCirclePlus size={24} />
+          <Plus size={24} />
           Leave Request
         </Link>
         <Link

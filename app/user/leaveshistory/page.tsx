@@ -8,7 +8,7 @@ export default async function DemoPage() {
   const data = await getData();
   const approve = data.filter((d) => d.status === "approved");
   return (
-    <div className="container mx-auto max-h-screen h-full no-scrollbar scroll-smooth">
+    <div className="mx-auto max-h-screen w-full px-2 h-full no-scrollbar scroll-smooth">
       <div className="flex items-center justify-between ">
         <div>
           <h1 className="text-4xl font-black ">Leave History</h1>

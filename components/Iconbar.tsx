@@ -1,42 +1,156 @@
-import React, { SetStateAction } from 'react'
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { IoMenu } from 'react-icons/io5'
-import { Dispatch } from '@reduxjs/toolkit'
+"use client";
+
+import React, { SetStateAction } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { IoMenu } from "react-icons/io5";
+import { Dispatch } from "@reduxjs/toolkit";
 import { CgProfile } from "react-icons/cg";
 import { FaHistory } from "react-icons/fa";
 import { FaPersonCirclePlus } from "react-icons/fa6";
 import { IoSettingsOutline } from "react-icons/io5";
-import {  BiLogOut } from "react-icons/bi";
-import { LuHome } from "react-icons/lu";
+import { BiLogOut } from "react-icons/bi";
+import { LuHistory, LuHome } from "react-icons/lu";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-
-
+} from "@/components/ui/tooltip";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { Separator } from "./ui/separator";
+import { profile } from "./ProfileAI";
+import { Plus } from "lucide-react";
 
 const Iconbar = () => {
+  const route = useRouter();
+  const path = usePathname();
   return (
-    <div className='grid w-[3rem] py-5 border rounded-xl'>
+    <div className="flex flex-col items-center ">
       {/* avtar */}
-      <Avatar>
-        <AvatarImage src='/image_profile.jpg'/>
-        <AvatarFallback>KS</AvatarFallback>
-      </Avatar>
+
+      <Separator className="my-2" />
       {/* Icons for links */}
-      <div>
+      <div className="w-full flex flex-col gap-3 items-center h-[80vh]">
         <TooltipProvider>
           <Tooltip>
-            <TooltipTrigger asChild>
-              <LuHome size={24}/>
+            <TooltipTrigger>
+              <div
+                onClick={() => route.push("/user")}
+                className={`${
+                  path === "/user" ? "bg-blue-500 text-white" : ""
+                } p-2 rounded-xl border shadow`}
+              >
+                <LuHome size={24} />
+              </div>
             </TooltipTrigger>
+            <TooltipContent side="left">
+              <h1>Dashboard</h1>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <div
+                onClick={() => route.push("/user/profile")}
+                className={`${
+                  path === "/user/profile" ? "bg-blue-500 text-white" : ""
+                } p-2 rounded-xl border shadow`}
+              >
+                <CgProfile size={24} />
+              </div>
+            </TooltipTrigger>
+            <TooltipContent side="left">
+              <h1>Profile</h1>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <div
+                onClick={() => route.push("/user/leavesrequest")}
+                className={`${
+                  path === "/user/leavesrequest" ? "bg-blue-500 text-white" : ""
+                } p-2 rounded-xl border shadow`}
+              >
+                <Plus size={24} />
+              </div>
+            </TooltipTrigger>
+            <TooltipContent side="left">
+              <h1>Leave Request</h1>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <div
+                onClick={() => route.push("/user/leaveshistory")}
+                className={`${
+                  path === "/user/leaveshistory" ? "bg-blue-500 text-white" : ""
+                } p-2 rounded-xl border shadow`}
+              >
+                <LuHistory size={24} />
+              </div>
+            </TooltipTrigger>
+            <TooltipContent side="left">
+              <h1>Leave History</h1>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <div
+                onClick={() => route.push("/user/setting")}
+                className={`${
+                  path === "/user/setting" ? "bg-blue-500 text-white" : ""
+                } p-2 rounded-xl border shadow`}
+              >
+                <IoSettingsOutline size={24} />
+              </div>
+            </TooltipTrigger>
+            <TooltipContent side="left">
+              <h1>Settings</h1>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </div>
+      <div className="flex flex-col gap-2">
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <Avatar>
+                <AvatarImage src="/image_profile.jpg" />
+                <AvatarFallback>KS</AvatarFallback>
+              </Avatar>
+            </TooltipTrigger>
+            <TooltipContent side="left">
+              <h1>{profile.personal.name.firstName}</h1>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <div
+                onClick={() => route.push("/login")}
+                className={` p-2 rounded-xl border shadow`}
+              >
+                <BiLogOut size={24} />
+              </div>
+            </TooltipTrigger>
+            <TooltipContent side="left">
+              <h1>Log-out</h1>
+            </TooltipContent>
           </Tooltip>
         </TooltipProvider>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Iconbar
+export default Iconbar;
