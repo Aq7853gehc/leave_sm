@@ -45,15 +45,41 @@ export const chart: Chart = {
   ],
 };
 
-export const personal = {
-  name: "Kamlesh Sahani",
-  designation: "Software Engineer",
-  id: 12356,
-  email: "kamlesh.sahani@gmail.com",
-  phone: "+91 1234567890",
-  address: "Noida",
-  dob: "1998-01-01",
-  doj: "2020-01-01",
-  department: "Acadmic",
+export const profile = {
+  personalInfo: {
+    title: "Personal Information",
+    fullName: "John Doe",
+    dob: "1990-05-15T00:00:00.000Z",
+    gender: "male",
+    contactNumber: "1667760696",
+    email: "kamlesh@gmail.com",
+    address: "1234 Main St, Anytown, USA",
+  },
+  professionalInfo: {
+    title: "Professional Information",
+    departmentId: "60b8d295f1d2a609c814f86b",
+    designation: "Software Engineer",
+    dateOfJoining: "2020-06-01T00:00:00.000Z",
+    employmentType: "FULL_TIME",
+  },
+  experienceInfo: {
+    title: "Experience Information",
+    company: "Tech Corp",
+    jobTitle: "Junior Developer",
+    duration: {
+      startDate: "2018-01-01T00:00:00.000Z",
+      endDate: "2020-05-31T00:00:00.000Z",
+    },
+    responsibilities:
+      "Developed web applications and collaborated with cross-functional teams.",
+  },
+  educationInfo: {
+    title: "Education Information",
+    highestQualification: "Bachelors",
+    university: "ABC University",
+    yearOfPassing: "2017-05-15T00:00:00.000Z",
+    specialization: "Computer Science",
+  },
+  isActive: true,
+  role: "REGULAR",
 };
-

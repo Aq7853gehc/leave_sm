@@ -63,7 +63,7 @@ const Sidebar = () => {
             </PopoverContent>
           </Popover>
 
-          <h1 className="text-3xl md:text-2xl font-semibold">Aquib Razi</h1>
+          <h1 className="text-3xl md:text-2xl font-semibold">Ritik Kohli</h1>
           <p className="text-gray-600 text-xl md:text-base font-medium">
             ID 123-456-789
           </p>
