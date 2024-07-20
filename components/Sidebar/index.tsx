@@ -28,7 +28,7 @@ const Sidebar = () => {
     <aside
       className={`relative pt-2 ${
         close ? "hidden" : "flex"
-      } sm:flex flex-col border h-screen min-w-[18rem]  `}
+      } sm:flex flex-col border h-screen min-w-[18rem]  shadow`}
     >
       {/* Header  */}
       <div className="block sm:hidden">

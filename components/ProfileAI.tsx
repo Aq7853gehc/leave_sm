@@ -59,9 +59,9 @@ const dateFormat = (dateString:string) => {
 const ProfileAI = () => {
   return (
     <div>
-      <div className="max-h-[110vh]">
+      <div className="max-h-[92vh]  overflow-scroll no-scrollbar">
         
-        <div className="mb-3 border shadow p-1 rounded">
+        <div className="mb-3 border shadow p-1 rounded px-2">
           <h2 className="text-2xl font-bold text-blue-600">Personal Information</h2>
           <div className="flex mb-2">
             <span className="w-1/3 text-gray-600">Name:</span>
@@ -99,7 +99,7 @@ const ProfileAI = () => {
           </div>
         </div>
 
-        <div className="mb-3 border shadow p-1 rounded">
+        <div className="mb-3 border shadow p-1 rounded px-2">
           <h2 className="text-2xl font-bold text-blue-600">Professional Information</h2>
           <div className="flex mb-2">
             <span className="w-1/3 text-gray-600">Department ID:</span>
@@ -121,7 +121,7 @@ const ProfileAI = () => {
           </div>
         </div>
 
-        <div className="mb-3 border shadow p-1 rounded ">
+        <div className="mb-3 border shadow p-1 rounded px-2 ">
           <h2 className="text-2xl font-bold  text-blue-600">Experience Information</h2>
           {profile.experience.map((experience, index) => (
             <div key={index} className="mb-4">
@@ -142,7 +142,7 @@ const ProfileAI = () => {
           ))}
         </div>
 
-        <div className="mb-3 border shadow p-1 rounded">
+        <div className="mb-2 border shadow p-1 rounded px-2">
           <h2 className="text-2xl font-bold  text-blue-600">Education Information</h2>
           <div className="flex mb-2">
             <span className="w-1/3 text-gray-600">HighestQualification:</span>
