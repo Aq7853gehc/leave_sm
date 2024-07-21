@@ -36,7 +36,7 @@ export const balanceColumns: ColumnDef<Balance>[] = [
           <AccordionItem value="item-1">
             <AccordionTrigger/>
             <AccordionContent>
-             {row.getValue("text")}
+             {row.getValue("rules")}
             </AccordionContent>
           </AccordionItem>
         </Accordion>
