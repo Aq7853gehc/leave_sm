@@ -13,7 +13,7 @@ import {
 export default function User({ children }: { children: ReactNode }) {
   const [show, setShow] = useState<boolean>(false);
   return (
-    <main>
+    <main className="transition-all ">
       <div className="flex overflow-hidden bg-white">
         {show ? (
           <div className="flex">
