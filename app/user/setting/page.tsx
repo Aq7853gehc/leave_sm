@@ -53,7 +53,6 @@ const Setting = () => {
             </div>
           </div>
           <div className="mt-5 w-full border-b-2 border-black"></div>
-
         </div>
         <div className="ml-5">
           <div className="flex gap-1">
@@ -79,48 +78,52 @@ const Setting = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="ml-5 ">
-        <div className="my-5 w-full border-b-2 border-black"></div>
+          <div className="my-5 w-full border-b-2 border-black"></div>
           <div className="flex">
             <IoMdNotifications className="text-4xl" />
             <h1 className="text-2xl font-extrabold"> Notification Setting</h1>
           </div>
         </div>
         <div className="ml-5">
-        <div className="my-5 w-full border-b-2 border-black"></div> 
+          <div className="my-5 w-full border-b-2 border-black"></div>
           <div className="flex gap-1">
             <VscLayoutActivitybarLeft className="text-3xl " />
             <h1 className="text-2xl font-extrabold"> Recent Activity</h1>
-
           </div>
-          <div className="w-5/6">
-            <ListLeave className="w-full" />
+          <div className="flex">
+            <div className="w-5/6">
+              <ListLeave className="w-full" />
+            </div>
+            <div className="ml-5 mt-5">
+              <button className="text-white bg-red-500 p-2 rounded-sm ">Delete</button>
+            </div>
           </div>
         </div>
         <div className="ml-5">
-        <div className="my-5 w-full border-b-2 border-black"></div>
+          <div className="my-5 w-full border-b-2 border-black"></div>
           <div className="flex gap-1">
             <FaPalette className="text-3xl" />
             <h1 className="text-2xl font-extrabold"> Theme Setting</h1>
           </div>
         </div>
         <div className="ml-5">
-        <div className="my-5 w-full border-b-2 border-black"></div>
+          <div className="my-5 w-full border-b-2 border-black"></div>
           <div className="flex gap-1">
             <SiGnuprivacyguard className="text-3xl mt-1" />
             <h1 className="text-2xl font-extrabold">  privacy setting</h1>
           </div>
         </div>
         <div className="ml-5">
-        <div className="my-5 w-full border-b-2 border-black"></div>
+          <div className="my-5 w-full border-b-2 border-black"></div>
           <div className="flex ">
             <MdContactSupport className="text-4xl" />
             <h1 className="text-2xl font-extrabold">   Help and Support</h1>
           </div>
         </div>
         <div className="ml-5 flex flex-col">
-           <div className="my-5 w-full border-b-2 border-black"></div>
+          <div className="my-5 w-full border-b-2 border-black"></div>
           <div className="flex">
             <IoLogOut className="text-4xl" />
             <h1 className="text-2xl font-extrabold">  logout</h1>
