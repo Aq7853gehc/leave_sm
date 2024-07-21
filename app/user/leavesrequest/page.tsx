@@ -101,7 +101,7 @@ const LeaveRequest = () => {
               </div>
             </div>
 
-            <div className="flex  justify-around">
+            <div className="flex flex-wrap justify-around">
               <Button variant={"destructive"}>Cancel Request</Button>
               <Button className="bg-blue-500 hover:bg-blue-600 ">
                 Submit Request
