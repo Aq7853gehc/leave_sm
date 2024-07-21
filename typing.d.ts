@@ -3,6 +3,7 @@ type Balance = {
   used: number;
   total: number;
   text: string;
+  rules:string;
 };
 
 interface Chart {

@@ -19,7 +19,7 @@ export default function User({ children }: { children: ReactNode }) {
           <div className="flex">
             <Sidebar />
             <Ellipsis
-              className="z-30 relative left-[-8%]"
+              className="z-30 relative left-[-8%] cursor-pointer"
               onClick={() => setShow(!show)}
             />
           </div>
