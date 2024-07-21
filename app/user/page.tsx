@@ -78,6 +78,7 @@ const Users = () => {
     <section className=" flex flex-col  w-full pt-2 h-[92vh] overflow-scroll no-scrollbar">
       <div className="flex sm:flex-row justify-between items-center sm:pr-3 flex-col sm:px-4 pr-5">
         <h1 className="sm:text-4xl  text-3xl font-bold ">Dashboard</h1>
+        <div className="flex ml-[75%] w-16 h-16 rounded-[50%] bg-slate-500"></div>
         <p
           onClick={() => routes.push("/user/leavesrequest")}
           className="text-sm border p-2 cursor-pointer rounded-lg  bg-blue-500 text-white w-fit"
