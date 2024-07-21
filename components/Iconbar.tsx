@@ -20,7 +20,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Separator } from "./ui/separator";
 import { profile } from "./ProfileAI";
-import { Plus } from "lucide-react";
+import { Plus, Weight } from "lucide-react";
 
 const Iconbar = () => {
   const route = useRouter();
@@ -33,6 +33,7 @@ const Iconbar = () => {
       {/* Icons for links */}
       <div className="w-full flex flex-col gap-3 items-center h-[80vh]">
         <TooltipProvider>
+          {/* Dashboard */}
           <Tooltip>
             <TooltipTrigger>
               <div
@@ -50,6 +51,7 @@ const Iconbar = () => {
           </Tooltip>
         </TooltipProvider>
         <TooltipProvider>
+          {/* Profile */}
           <Tooltip>
             <TooltipTrigger>
               <div
@@ -67,6 +69,7 @@ const Iconbar = () => {
           </Tooltip>
         </TooltipProvider>
         <TooltipProvider>
+          {/* Leave Request */}
           <Tooltip>
             <TooltipTrigger>
               <div
@@ -84,6 +87,25 @@ const Iconbar = () => {
           </Tooltip>
         </TooltipProvider>
         <TooltipProvider>
+          {/* Leave Balance */}
+          <Tooltip>
+            <TooltipTrigger>
+              <div
+                onClick={() => route.push("/user/leavebalance")}
+                className={`${
+                  path === "/user/leavebalance" ? "bg-blue-500 text-white" : ""
+                } p-2 rounded-xl border shadow`}
+              >
+                <Weight size={24} />
+              </div>
+            </TooltipTrigger>
+            <TooltipContent side="left">
+              <h1>Leave Balance</h1>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <TooltipProvider>
+          {/* History */}
           <Tooltip>
             <TooltipTrigger>
               <div
@@ -101,6 +123,7 @@ const Iconbar = () => {
           </Tooltip>
         </TooltipProvider>
         <TooltipProvider>
+          {/* Setting */}
           <Tooltip>
             <TooltipTrigger>
               <div
@@ -119,6 +142,7 @@ const Iconbar = () => {
         </TooltipProvider>
       </div>
       <div className="flex flex-col gap-2">
+        {/* Avtar  */}
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger>
@@ -132,7 +156,7 @@ const Iconbar = () => {
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-
+{/* Logout icon  */}
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger>

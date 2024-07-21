@@ -21,7 +21,6 @@ import { Plus } from "lucide-react";
 
 
 const Sidebar = () => {
-  const [close, setClose] = useState<Boolean>(false);
   const path = usePathname();
   return (
     <aside
@@ -29,14 +28,7 @@ const Sidebar = () => {
     >
     
       
-      {/* Header 
-      // <div className="block sm:hidden">
-      //   <IoMdClose
-      //     size={32}
-      //     className="absolute right-1"
-      //     onClick={() => setClose(true)}
-      //   />
-      // </div> */}
+      
  
       <section className="h-[20rem] flex flex-col justify-center gap-2 flex-1 items-center">
         {/* Profile pic and heading */}
