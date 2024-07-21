@@ -1,12 +1,13 @@
+"use client"
 import { Separator } from "@/components/ui/separator";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getData } from "@/constants/leavesdata";
+import { redirect } from "next/navigation";
 
 export default async function DemoPage() {
   const data = await getData();
-  const approve = data.filter((d) => d.status === "approved");
   return (
     <div className="mx-auto max-h-screen w-full px-2 h-full no-scrollbar scroll-smooth">
       <div className="flex items-center justify-between ">
@@ -19,8 +20,10 @@ export default async function DemoPage() {
         {/* <h2 className="text-2xl font-semibold">
           Balance: <span className="text-2xl font-medium">43 days</span>
         </h2> */}
-        <div>
-          <button className="bg-blue-500 p-3 rounded-lg text-white">View Balance</button>
+        <div onClick={() => redirect("/user/leavebalance")}>
+          <button className="bg-blue-500 p-3 rounded-lg text-white">
+            View Balance
+          </button>
         </div>
       </div>
       <Separator className="mb-2 mt-2" />
@@ -47,13 +50,19 @@ export default async function DemoPage() {
             data={data.filter((d) => d.status === "approved")}
           />
         </TabsContent>
-        <TabsContent value="pending" className=" max-h-[110vh] overflow-scroll scroll-smooth border rounded-md no-scrollbar">
+        <TabsContent
+          value="pending"
+          className=" max-h-[110vh] overflow-scroll scroll-smooth border rounded-md no-scrollbar"
+        >
           <DataTable
             columns={columns}
             data={data.filter((d) => d.status === "pending")}
           />
         </TabsContent>
-        <TabsContent value="cancel" className=" max-h-[110vh] overflow-scroll border rounded-md no-scrollbar">
+        <TabsContent
+          value="cancel"
+          className=" max-h-[110vh] overflow-scroll border rounded-md no-scrollbar"
+        >
           <DataTable
             columns={columns}
             data={data.filter((d) => d.status === "cancel")}
