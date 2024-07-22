@@ -12,14 +12,14 @@ import { IoLogOut } from "react-icons/io5";
 import ListLeave from '@/components/ListLeave';
 const Setting = () => {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full max-h-screen h-full  no-scrollbar">
       <h1 className="text-4xl font-black">Settings</h1>
       <p className="text-base text-gray-500">
         Here you make changes according to your prefrence
       </p>
       <Separator className="my-2" />
-      <div className=" border-l-2 border-t-2 border-black w-full h-full rounded-lg">
-        <div className="ml-5 mt-5 mb-5">
+      <div className=" border-l-2 border-t-2 border-black w-full h-full rounded-lg max-h-screen  overflow-scroll no-scrollbar">
+        <div className="my-2 ml-5">
           <div className="flex gap-1">
             <ImProfile className="mt-1 text-3xl" />
             <h1 className="text-2xl font-extrabold"> Profile Setting</h1>

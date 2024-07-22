@@ -19,7 +19,7 @@ interface Chart {
 type LeavesHistory = {
   id: number;
   type: string;
-  status: "pending" | "approved" | "cancel";
+  status: "pending" | "approved" | "decline";
   startdate: string;
   enddate:string
   duration:number

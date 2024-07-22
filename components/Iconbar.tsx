@@ -21,6 +21,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { Separator } from "./ui/separator";
 import { profile } from "./ProfileAI";
 import { Plus, Weight } from "lucide-react";
+import { ImProfile } from "react-icons/im";
 
 const Iconbar = () => {
   const route = useRouter();
@@ -60,7 +61,7 @@ const Iconbar = () => {
                   path === "/user/profile" ? "bg-blue-500 text-white" : ""
                 } p-2 rounded-xl border shadow`}
               >
-                <CgProfile size={24} />
+                <ImProfile size={24} />
               </div>
             </TooltipTrigger>
             <TooltipContent side="left">

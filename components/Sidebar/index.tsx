@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import {  BiLogOut } from "react-icons/bi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Weight } from 'lucide-react';
+import { ImProfile } from "react-icons/im";
 import { Separator } from "../ui/separator";
 import {
   Popover,
@@ -87,7 +88,7 @@ const Sidebar = () => {
             path === "/user/profile" ? "text-white bg-blue-500" : null
           }`}
         >
-          <CgProfile size={24} />
+          <ImProfile size={24} />
           Profile
         </Link>
         <Link
