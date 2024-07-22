@@ -14,7 +14,7 @@ export default function User({ children }: { children: ReactNode }) {
   const [show, setShow] = useState<boolean>(false);
   return (
     <main className="">
-      <div className="flex overflow-hidden bg-white">
+      <div className="flex gap-3 overflow-hidden bg-white">
         {show ? (
           <div className="flex">
             <Sidebar />
@@ -24,7 +24,7 @@ export default function User({ children }: { children: ReactNode }) {
             />
           </div>
         ) : (
-          <div className="flex flex-col w-[3rem] items-center h-screen border rounded-xl">
+          <div className="flex flex-col  w-[3rem] items-center h-screen border rounded-xl">
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>

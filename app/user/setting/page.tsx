@@ -18,7 +18,7 @@ const Setting = () => {
         Here you make changes according to your prefrence
       </p>
       <Separator className="my-2" />
-      <div className="ml-5 border-l-2 border-t-2 border-black w-full h-full rounded-lg">
+      <div className=" border-l-2 border-t-2 border-black w-full h-full rounded-lg">
         <div className="ml-5 mt-5 mb-5">
           <div className="flex gap-1">
             <ImProfile className="mt-1 text-3xl" />
