@@ -67,14 +67,19 @@
     @apply bg-background text-text;
   }
   h1 {
-    @apply text-heading;
+    @apply text-heading dark:text-white;
   }
+ 
+}
+
+p{
+  @apply dark:text-white
 }
 
 a {
-  @apply text-black;
+  @apply text-black dark:text-white;
 
-  @apply flex gap-2 w-full bg-zinc-200  border rounded-sm px-4 py-2 truncate;
+  @apply flex gap-2 w-full bg-zinc-200 dark:bg-black  border rounded-sm px-4 py-2 truncate ;
 }
 
 @layer utilities {

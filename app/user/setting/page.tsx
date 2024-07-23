@@ -10,15 +10,16 @@ import { SiGnuprivacyguard } from "react-icons/si";
 import { MdContactSupport } from "react-icons/md";
 import { IoLogOut } from "react-icons/io5";
 import ListLeave from '@/components/ListLeave';
+import { profile } from "@/constants/data";
 const Setting = () => {
   return (
-    <div className="flex flex-col w-full max-h-screen h-full  no-scrollbar">
+    <div className="flex flex-col w-full max-w-screen max-h-screen h-full  no-scrollbar">
       <h1 className="text-4xl font-black">Settings</h1>
       <p className="text-base text-gray-500">
         Here you make changes according to your prefrence
       </p>
       <Separator className="my-2" />
-      <div className=" border-l-2 border-t-2 border-black w-full h-full rounded-lg max-h-screen  overflow-scroll no-scrollbar">
+      <div className="   w-full h-full rounded-lg max-h-screen  overflow-scroll no-scrollbar">
         <div className="my-2 ml-5">
           <div className="flex gap-1">
             <ImProfile className="mt-1 text-3xl" />
@@ -29,15 +30,15 @@ const Setting = () => {
             <div className="w-full flex flex-col gap-2">
               <div className="flex">
                 <p className="w-1/4 text-lg font-extrabold">Name:</p>
-                <p className="">Saad Mehmood</p>
+                <p className="">{profile.personalInfo.fullName}</p>
               </div>
               <div className="flex">
                 <p className="w-1/4 text-lg font-extrabold">Date Of Birth:</p>
-                <p >17-05-2006</p>
+                <p >{profile.personalInfo.dob}</p>
               </div>
               <div className="flex">
                 <p className="w-1/4 text-lg font-extrabold">Gender:</p>
-                <p >Male</p>
+                <p >{profile.personalInfo.gender}</p>
               </div>
               <div className="flex">
                 <p className="w-1/4 text-lg font-extrabold">Contact:</p>
@@ -52,7 +53,7 @@ const Setting = () => {
               <button className="text-white bg-blue-500 p-2 rounded-sm ">Edit Profile</button>
             </div>
           </div>
-          <div className="mt-5 w-full border-b-2 border-black"></div>
+          <div className="mt-5 w-full border-b-2 border-black dark:border-white"/>
         </div>
         <div className="ml-5">
           <div className="flex gap-1">
@@ -80,7 +81,7 @@ const Setting = () => {
         </div>
 
         <div className="ml-5 ">
-          <div className="my-5 w-full border-b-2 border-black"></div>
+          <div className="my-5 w-full border-b-2 border-black dark:border-white"/>
           <div className="flex">
             <IoMdNotifications className="text-4xl" />
             <h1 className="text-2xl font-extrabold"> Notification Setting</h1>
@@ -102,28 +103,28 @@ const Setting = () => {
           </div>
         </div>
         <div className="ml-5">
-          <div className="my-5 w-full border-b-2 border-black"></div>
+          <div className="my-5 w-full border-b-2 border-black dark:border-white "></div>
           <div className="flex gap-1">
             <FaPalette className="text-3xl" />
             <h1 className="text-2xl font-extrabold"> Theme Setting</h1>
           </div>
         </div>
         <div className="ml-5">
-          <div className="my-5 w-full border-b-2 border-black"></div>
+          <div className="my-5 w-full border-b-2 border-black dark:border-white"></div>
           <div className="flex gap-1">
             <SiGnuprivacyguard className="text-3xl mt-1" />
             <h1 className="text-2xl font-extrabold">  privacy setting</h1>
           </div>
         </div>
         <div className="ml-5">
-          <div className="my-5 w-full border-b-2 border-black"></div>
+          <div className="my-5 w-full border-b-2 border-black dark:border-white"></div>
           <div className="flex ">
             <MdContactSupport className="text-4xl" />
             <h1 className="text-2xl font-extrabold">   Help and Support</h1>
           </div>
         </div>
         <div className="ml-5 flex flex-col">
-          <div className="my-5 w-full border-b-2 border-black"></div>
+          <div className="my-5 w-full border-b-2 border-black dark:border-white"></div>
           <div className="flex">
             <IoLogOut className="text-4xl" />
             <h1 className="text-2xl font-extrabold">  logout</h1>

@@ -22,6 +22,7 @@ import { Separator } from "./ui/separator";
 import { profile } from "./ProfileAI";
 import { Plus, Weight } from "lucide-react";
 import { ImProfile } from "react-icons/im";
+import ThemeToggle from "./ThemeToggle";
 
 const Iconbar = () => {
   const route = useRouter();
@@ -32,7 +33,7 @@ const Iconbar = () => {
 
       <Separator className="my-2" />
       {/* Icons for links */}
-      <div className="w-full flex flex-col gap-3 items-center h-[80vh]">
+      <div className="w-full flex flex-col gap-3 items-center h-[75vh]">
         <TooltipProvider>
           {/* Dashboard */}
           <Tooltip>
@@ -157,6 +158,8 @@ const Iconbar = () => {
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
+        {/* Theme Toggle icon */}
+        <ThemeToggle/>
 {/* Logout icon  */}
         <TooltipProvider>
           <Tooltip>

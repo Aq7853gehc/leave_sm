@@ -73,11 +73,11 @@ const Sidebar = () => {
       <Separator />
 
       {/* Nav links */}
-      <section className=" flex flex-col p-5 gap-2  bg-white flex-1 ">
+      <section className=" flex flex-col p-5 gap-2  flex-1 ">
         {/* List of Link */}
         <Link
           href={"/user"}
-          className={`${path === "/user" ? "bg-blue-500 text-white" : null}`}
+          className={`${path === "/user" ? "dark:bg-blue-500 bg-blue-600 text-white" : null}`}
         >
           <LuHome size={24} />
           Dashboard
@@ -85,7 +85,7 @@ const Sidebar = () => {
         <Link
           href={"/user/profile"}
           className={`${
-            path === "/user/profile" ? "text-white bg-blue-500" : null
+            path === "/user/profile" ? "text-white bg-blue-600 dark:bg-blue-500" : null
           }`}
         >
           <ImProfile size={24} />
@@ -94,7 +94,7 @@ const Sidebar = () => {
         <Link
           href={"/user/leavesrequest"}
           className={`${
-            path === "/user/leavesrequest" ? "text-white bg-blue-500" : null
+            path === "/user/leavesrequest" ? "text-white bg-blue-600 dark:bg-blue-500" : null
           }`}
         >
           <Plus size={24} />
@@ -102,7 +102,7 @@ const Sidebar = () => {
         </Link>
         <Link
           href={"/user/leavebalance"}
-          className={`${path === "/user/leavebalance" ? "text-white bg-blue-500" : null
+          className={`${path === "/user/leavebalance" ? "text-white bg-blue-600 dark:bg-blue-500" : null
             }`}
         >
           <Weight size={24} />
@@ -111,7 +111,7 @@ const Sidebar = () => {
         <Link
           href={"/user/leaveshistory"}
           className={`${
-            path === "/user/leaveshistory" ? "bg-blue-500 text-white" : null
+            path === "/user/leaveshistory" ? "dark:bg-blue-500 bg-blue-600 text-white" : null
           } `}
         >
           <FaHistory size={24} />
@@ -121,7 +121,7 @@ const Sidebar = () => {
         <Link
           href={"/user/setting"}
           className={` ${
-            path === "/user/setting" ? "bg-blue-500 text-white" : null
+            path === "/user/setting" ? "dark:bg-blue-500 bg-blue-600 text-white" : null
           }  `}
         >
           <IoSettingsOutline size={24} />
