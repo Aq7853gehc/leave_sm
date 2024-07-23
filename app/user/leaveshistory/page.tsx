@@ -1,12 +1,13 @@
-"use client"
+"use client";
 import { Separator } from "@/components/ui/separator";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getData } from "@/constants/leavesdata";
-import { redirect } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 
 export default async function DemoPage() {
+  const routes = useRouter();
   const data = await getData();
   return (
     <div className="mx-auto max-h-screen w-full px-2 h-full no-scrollbar scroll-smooth">
@@ -20,8 +21,11 @@ export default async function DemoPage() {
         {/* <h2 className="text-2xl font-semibold">
           Balance: <span className="text-2xl font-medium">43 days</span>
         </h2> */}
-        <div onClick={() => redirect("/user/leavebalance")}>
-          <button className="bg-blue-500 p-3 rounded-lg text-white">
+        <div>
+          <button
+            className="bg-blue-500 p-3 rounded-lg text-white shadow"
+            onClick={() => routes.push("/user/leavebalance")}
+          >
             View Balance
           </button>
         </div>
@@ -33,7 +37,7 @@ export default async function DemoPage() {
           <TabsTrigger value="approved">Approved</TabsTrigger>
 
           <TabsTrigger value="pending">Pending</TabsTrigger>
-          <TabsTrigger value="cancel">Cancel</TabsTrigger>
+          <TabsTrigger value="decline">Decline</TabsTrigger>
         </TabsList>
         <TabsContent
           value="all"
@@ -60,12 +64,12 @@ export default async function DemoPage() {
           />
         </TabsContent>
         <TabsContent
-          value="cancel"
-          className=" max-h-[110vh] overflow-scroll border rounded-md no-scrollbar"
+          value="decline"
+          className=" max-h-[110vh] overflow-scroll scroll-smooth border rounded-md no-scrollbar"
         >
           <DataTable
             columns={columns}
-            data={data.filter((d) => d.status === "cancel")}
+            data={data.filter((d) => d.status === "decline")}
           />
         </TabsContent>
       </Tabs>
