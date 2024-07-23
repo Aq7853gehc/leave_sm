@@ -120,7 +120,7 @@ const Setting = () => {
             <SiGnuprivacyguard className="text-3xl mt-1" />
             <h1 className="text-2xl font-extrabold">  privacy setting</h1>
           </div>
-        </div> */}
+        </div> 
         <div className="ml-5">
           <div className="my-5 w-full border-b-2 border-black dark:border-white"></div>
           <div className="flex ">
