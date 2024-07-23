@@ -90,7 +90,7 @@ const Users = () => {
       <div className="relative flex flex-wrap items-center  justify-around  gap-5 w-full pb-2  pr-7 no-scrollbar ">
         {/* balaced below  header part */}
         {bal.map((itmes) => (
-          <div className="relative min-w-[10rem]  flex flex-col  justify-center  p-4 transition-all duration-150  border rounded-xl cursor-pointer hover:shadow-lg hover:border-black"
+          <div className="relative min-w-[10rem]  flex flex-col  justify-center  p-4 transition-all duration-150  border rounded-xl cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white"
           onClick={()=>routes.push("/user/leavebalance")}>
             <p className=" font-medium ">{itmes.leaveType}</p>
             <h1 className="text-2xl font-bold">
