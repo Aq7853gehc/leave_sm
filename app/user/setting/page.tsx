@@ -49,8 +49,8 @@ const Setting = () => {
                 <p >D-27, Shaheen Bagh Okhla</p>
               </div>
             </div>
-            <div className="w-full">
-              <button className="text-white bg-blue-500 p-2 mr-4 rounded-sm ">Edit Profile</button>
+            <div className="sm:w-full max-sm:flex">
+              <button className="text-white max-sm:w-full max-sm:mr-4 bg-blue-500 p-2 mr-4 rounded-sm ">Edit Profile</button>
             </div>
           </div>
           <div className="mt-5 w-full border-b-2 border-black dark:border-white"/>
