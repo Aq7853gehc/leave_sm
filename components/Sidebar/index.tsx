@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { FaHistory } from "react-icons/fa";
 import { LuHome } from "react-icons/lu";
-import { usePathname } from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
 import {  BiLogOut } from "react-icons/bi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Weight } from 'lucide-react';
@@ -19,10 +19,12 @@ import {
 import { Input } from "../ui/input";
 import { Label } from "@/components/ui/label"
 import { Plus } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 
 const Sidebar = () => {
   const [close, setClose] = useState<Boolean>(false);
+  const routes = useRouter()
   const path = usePathname();
   return (
     <aside
@@ -52,17 +54,7 @@ const Sidebar = () => {
         </div>
 
         <div className="  rounded-3xl  flex justify-center items-center flex-col">
-          <Popover >
-            <PopoverTrigger className="text-blue-500 text-sm">Edit</PopoverTrigger>
-            <PopoverContent className="max-w-xs border-2" >
-              <div className="flex max-w-xs w-full bg-transparent ">
-                <div className="grid w-full max-w-sm items-center gap-1.5 bg-transparent">
-                  <Label>Profile Pic</Label>
-                  <Input id="picture" type="file" />
-                </div>
-              </div>
-            </PopoverContent>
-          </Popover>
+          <p className="text-blue-400 dark:text-blue-300  font-medium text-sm cursor-pointer" onClick={()=>routes.push("/user/setting")}>EDIT</p>
 
           <h1 className="text-3xl md:text-2xl font-semibold">Ritik Kohli</h1>
           <p className="text-gray-600 text-xl md:text-base font-medium">
