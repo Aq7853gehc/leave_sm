@@ -18,38 +18,38 @@ const Setting = () => {
         Here you make changes according to your prefrence
       </p>
       <Separator className="my-2" />
-      <div className=" border-l-2 border-t-2 border-black w-full h-full rounded-lg max-h-screen  overflow-scroll no-scrollbar">
+      <div className=" border-l-2  border-gray-400 w-full h-full rounded-lg max-h-screen  overflow-scroll no-scrollbar">
         <div className="my-2 ml-5">
           <div className="flex gap-1">
             <ImProfile className="mt-1 text-3xl" />
             <h1 className="text-2xl font-extrabold"> Profile Setting</h1>
           </div>
-          <div className="flex mt-5">
+          <div className="flex  max-sm:flex-col mt-5">
 
             <div className="w-full flex flex-col gap-2">
-              <div className="flex">
-                <p className="w-1/4 text-lg font-extrabold">Name:</p>
+              <div className="flex  max-sm:gap-2">
+                <p className="sm:w-1/4 text-lg font-extrabold">Name:</p>
                 <p className="">Saad Mehmood</p>
               </div>
-              <div className="flex">
-                <p className="w-1/4 text-lg font-extrabold">Date Of Birth:</p>
+              <div className="flex max-sm:gap-2">
+                <p className="sm:w-1/4 text-lg font-extrabold">Date Of Birth:</p>
                 <p >17-05-2006</p>
               </div>
-              <div className="flex">
-                <p className="w-1/4 text-lg font-extrabold">Gender:</p>
+              <div className="flex max-sm:gap-2">
+                <p className="sm:w-1/4 text-lg font-extrabold">Gender:</p>
                 <p >Male</p>
               </div>
-              <div className="flex">
-                <p className="w-1/4 text-lg font-extrabold">Contact:</p>
+              <div className="flex max-sm:gap-2">
+                <p className="sm:w-1/4 text-lg font-extrabold">Contact:</p>
                 <p >9783468480</p>
               </div>
-              <div className="flex">
-                <p className="w-1/4 text-lg font-extrabold">Address:</p>
+              <div className="flex max-sm:gap-2">
+                <p className="sm:w-1/4 text-lg font-extrabold">Address:</p>
                 <p >D-27, Shaheen Bagh Okhla</p>
               </div>
             </div>
             <div className="w-full">
-              <button className="text-white bg-blue-500 p-2 rounded-sm ">Edit Profile</button>
+              <button className="text-white bg-blue-500 p-2 mr-4 rounded-sm ">Edit Profile</button>
             </div>
           </div>
           <div className="mt-5 w-full border-b-2 border-black"></div>
@@ -60,21 +60,26 @@ const Setting = () => {
             <h1 className="text-2xl font-extrabold"> Account Setting</h1>
           </div>
           <div className="w-full gap-2 flex-col flex mt-5 mb-5">
-            <div className="flex">
-              <p className="w-1/4 text-lg font-extrabold">
-                Your Password:
-              </p>
-              <p className="w-1/4 text-lg font-light">
-                ************
-              </p>
-              <button className="text-white bg-blue-500 p-2 rounded-sm ">change</button>
-            </div>
-            <div className="flex">
-              <p className="w-1/4 text-lg font-extrabold">
+     
+            <div className="flex sm:flex-row flex-col">
+           {/* <div className="flex sm:flex-row flex-col sm:gap-0 gap-4"> */}
+           <p className="sm:w-1/4 text-lg font-extrabold">
                 Your email:
               </p>
-              <p className="w-1/4 text-lg font-light">saadmehmood@gmail.com</p>
-              <button className="text-white bg-blue-500 p-2 rounded-sm ">change</button>
+              <p className="sm:w-1/4 text-lg font-light">saadmehmood@gmail.com</p>
+           {/* </div> */}
+              {/* <button className="text-white bg-blue-500 p-2 rounded-sm ">change</button> */}
+            </div>
+            <div className="flex  max-sm:flex-col">
+              {/* <div className="flex  max-sm:flex-col max-sm:gap-4"> */}
+                <p className="sm:w-1/4  text-lg font-extrabold">
+                  Your Password:
+                </p>
+                <p className="sm:w-1/4 text-lg font-light">
+                  ************
+                </p>
+              {/* </div> */}
+              <button className="text-white max-sm:mr-4 bg-blue-500 p-2 rounded-sm ">change</button>
             </div>
           </div>
         </div>
@@ -86,21 +91,21 @@ const Setting = () => {
             <h1 className="text-2xl font-extrabold"> Notification Setting</h1>
           </div>
         </div>
-        <div className="ml-5">
+        {/* <div className="ml-5">
           <div className="my-5 w-full border-b-2 border-black"></div>
           <div className="flex gap-1">
             <VscLayoutActivitybarLeft className="text-3xl " />
             <h1 className="text-2xl font-extrabold"> Recent Activity</h1>
           </div>
-          <div className="flex">
+          <div className="flex sm:flex-row  flex-col">
             <div className="w-5/6">
               <ListLeave className="w-full" />
             </div>
-            <div className="ml-5 mt-5">
+            <div className="max-700:flex max-700:justify-center max-700:items-center sm:ml-5 sm:mt-5">
               <button className="text-white bg-red-500 p-2 rounded-sm ">Delete</button>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="ml-5">
           <div className="my-5 w-full border-b-2 border-black"></div>
           <div className="flex gap-1">
@@ -108,13 +113,13 @@ const Setting = () => {
             <h1 className="text-2xl font-extrabold"> Theme Setting</h1>
           </div>
         </div>
-        <div className="ml-5">
+        {/* <div className="ml-5">
           <div className="my-5 w-full border-b-2 border-black"></div>
           <div className="flex gap-1">
             <SiGnuprivacyguard className="text-3xl mt-1" />
             <h1 className="text-2xl font-extrabold">  privacy setting</h1>
           </div>
-        </div>
+        </div> */}
         <div className="ml-5">
           <div className="my-5 w-full border-b-2 border-black"></div>
           <div className="flex ">
@@ -128,9 +133,9 @@ const Setting = () => {
             <IoLogOut className="text-4xl" />
             <h1 className="text-2xl font-extrabold">  logout</h1>
           </div>
-          <div className="flex my-5">
+          <div className="flex my-5 max-sm:flex-col ">
             <p className="w-2/4 text-lg font-extrabold">Want to logout?</p>
-            <button className="text-white bg-blue-500 p-2 rounded-sm ">Logout</button>
+            <button className="text-white bg-blue-500 p-2 max-sm:mt-4 max-sm:mr-4 rounded-sm ">Logout</button>
           </div>
 
         </div>
