@@ -53,7 +53,7 @@ const Setting = () => {
               <button className="text-white max-sm:w-full max-sm:mr-4 bg-blue-500 p-2 mr-4 rounded-sm ">Edit Profile</button>
             </div>
           </div>
-          <div className="mt-5 w-full border-b-2 border-black dark:border-white"/>
+          <div className="mt-5 w-full border-b-2 border-black dark:border-white" />
         </div>
         <div className="ml-5">
           <div className="flex gap-1">
@@ -61,24 +61,24 @@ const Setting = () => {
             <h1 className="text-2xl font-extrabold"> Account Setting</h1>
           </div>
           <div className="w-full gap-2 flex-col flex mt-5 mb-5">
-     
+
             <div className="flex sm:flex-row flex-col">
-           {/* <div className="flex sm:flex-row flex-col sm:gap-0 gap-4"> */}
-           <p className="sm:w-1/4 text-lg font-extrabold">
+              {/* <div className="flex sm:flex-row flex-col sm:gap-0 gap-4"> */}
+              <p className="sm:w-1/4 text-lg font-extrabold">
                 Your email:
               </p>
               <p className="sm:w-1/4 text-lg font-light">saadmehmood@gmail.com</p>
-           {/* </div> */}
+              {/* </div> */}
               {/* <button className="text-white bg-blue-500 p-2 rounded-sm ">change</button> */}
             </div>
             <div className="flex  max-sm:flex-col">
               {/* <div className="flex  max-sm:flex-col max-sm:gap-4"> */}
-                <p className="sm:w-1/4  text-lg font-extrabold">
-                  Your Password:
-                </p>
-                <p className="sm:w-1/4 text-lg font-light">
-                  ************
-                </p>
+              <p className="sm:w-1/4  text-lg font-extrabold">
+                Your Password:
+              </p>
+              <p className="sm:w-1/4 text-lg font-light">
+                ************
+              </p>
               {/* </div> */}
               <button className="text-white max-sm:mr-4 bg-blue-500 p-2 rounded-sm ">change</button>
             </div>
@@ -86,48 +86,83 @@ const Setting = () => {
         </div>
 
         <div className="ml-5 ">
-          <div className="my-5 w-full border-b-2 border-black dark:border-white"/>
+          <div className="my-5 w-full border-b-2 border-black dark:border-white" />
           <div className="flex">
             <IoMdNotifications className="text-4xl" />
             <h1 className="text-2xl font-extrabold"> Notification Setting</h1>
           </div>
         </div>
-        {/* <div className="ml-5">
-          <div className="my-5 w-full border-b-2 border-black"></div>
-          <div className="flex gap-1">
-            <VscLayoutActivitybarLeft className="text-3xl " />
-            <h1 className="text-2xl font-extrabold"> Recent Activity</h1>
-          </div>
-          <div className="flex sm:flex-row  flex-col">
-            <div className="w-5/6">
-              <ListLeave className="w-full" />
-            </div>
-            <div className="max-700:flex max-700:justify-center max-700:items-center sm:ml-5 sm:mt-5">
-              <button className="text-white bg-red-500 p-2 rounded-sm ">Delete</button>
-            </div>
-          </div>
-        </div> */}
         <div className="ml-5">
           <div className="my-5 w-full border-b-2 border-black dark:border-white "></div>
           <div className="flex gap-1">
             <FaPalette className="text-3xl" />
-            <h1 className="text-2xl font-extrabold"> Theme Setting</h1>
+            <h1 className="text-2xl font-extrabold">Theme Setting</h1>
           </div>
+          <div>
+            <div className="flex max-sm:flex-col  mt-5 ">
+              <div className="w-full flex items-center">
+                <p className="text-lg sm:w-1/4 font-extrabold">Select Theme:</p>
+                <div className="ml-4 sm:w-1/4 flex items-center">
+                  <label className="mr-2">Light</label>
+                  <input type="radio" name="theme" value="light" className="mr-4" />
+                  <label className="mr-2">Dark</label>
+                  <input type="radio" name="theme" value="dark" />
+                </div>
+              </div>
+              <div className="w-full flex items-center">
+                <button className="text-white max-sm:w-full max-sm:mr-4 max-sm:mt-3 bg-blue-500 p-2 rounded-sm">Save Theme</button>
+              </div>
+            </div>
+          </div>
+          <div className="mt-5 w-full border-b-2 border-black dark:border-white" />
         </div>
         <div className="ml-5">
           <div className="my-5 w-full border-b-2 border-black"></div>
           <div className="flex gap-1">
             <SiGnuprivacyguard className="text-3xl mt-1" />
-            <h1 className="text-2xl font-extrabold">  privacy setting</h1>
+            <h1 className="text-2xl font-extrabold">Privacy Setting</h1>
           </div>
-        </div> 
+          <div className="flex max-sm:flex-col mt-5">
+            <div className="w-full flex flex-col">
+              <div className="w-full flex items-center">
+                <p className="text-lg sm:w-1/2 font-extrabold">Data Sharing:</p>
+                <div className="ml-4 flex items-center">
+                  <label className="mr-2">Enable</label>
+                  <input type="checkbox" name="dataSharing" className="mr-4" />
+                </div>
+              </div>
+              <div className="w-full flex items-center">
+                <p className="text-lg sm:w-1/2 font-extrabold">Cookies:</p>
+                <div className="ml-4 flex items-center">
+                  <label className="mr-2">Accept</label>
+                  <input type="checkbox" name="cookies" />
+                </div>
+              </div>
+            </div>
+            <div className="w-full flex items-center">
+              <button className="text-white max-sm:w-full max-sm:mr-4 max-sm:mt-3 bg-blue-500 p-2 rounded-sm">Save Privacy Settings</button>
+            </div>
+          </div>
+        </div>
         <div className="ml-5">
           <div className="my-5 w-full border-b-2 border-black dark:border-white"></div>
           <div className="flex ">
             <MdContactSupport className="text-4xl" />
-            <h1 className="text-2xl font-extrabold">   Help and Support</h1>
+            <h1 className="text-2xl font-extrabold">Help and Support</h1>
+          </div>
+          <div className="w-full flex flex-col mt-5 gap-4">
+            <div className=" max-sm:w-[95%] border-2 p-2">
+              FAQ
+            </div>
+            <div className=" max-sm:w-[95%] border-2 p-2">
+              Contact Support
+            </div>
+            <div className=" max-sm:w-[95%] border-2 p-2">
+              Help Resources
+            </div>
           </div>
         </div>
+
         <div className="ml-5 flex flex-col">
           <div className="my-5 w-full border-b-2 border-black dark:border-white"></div>
           <div className="flex">
