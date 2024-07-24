@@ -227,17 +227,17 @@ const LeaveRequest: React.FC = () => {
       <p className="text-base text-gray-500">Here apply for leaves</p>
       <Separator className="mb-1" />
       <div className="flex w-full h-full items-center py-5 flex-col">
-        <div className="mx-auto w-full max-w-2xl p-3 border-2 rounded-lg border-gray-300 bg-white">
+        <div className="mx-auto w-full max-w-2xl p-3 border-2 rounded-lg border-gray-300 ">
           <form >
             <div className="mb-3">
               <label
                 htmlFor="leaveType"
-                className="mb-1 block text-base font-medium text-[#07074D]"
+                className="mb-1 block text-base font-medium text-[#07074D] dark:text-white"
               >
                 Leave Types
               </label>
               <select
-                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md"
+                className="w-full rounded-md border border-input bg-background py-3 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md"
                 name="leaveType"
                 id="leaveType"
                 value={formData.leaveType}
@@ -386,7 +386,7 @@ const LeaveRequest: React.FC = () => {
               <Button variant="destructive" type="reset">
                 Cancel Request
               </Button>
-              <Button className="bg-blue-500 hover:bg-blue-600" type="submit">
+              <Button className="bg-blue-500 hover:bg-blue-600 dark:text-white"  type="submit">
                 Submit Request
               </Button>
               <Button variant="outline" type="button">
