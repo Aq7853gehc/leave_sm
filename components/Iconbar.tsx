@@ -28,7 +28,7 @@ const Iconbar = () => {
   const route = useRouter();
   const path = usePathname();
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center  ">
       {/* avtar */}
 
       <Separator className="my-2" />
@@ -159,8 +159,8 @@ const Iconbar = () => {
           </Tooltip>
         </TooltipProvider>
         {/* Theme Toggle icon */}
-        <ThemeToggle/>
-{/* Logout icon  */}
+        <ThemeToggle />
+        {/* Logout icon  */}
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger>

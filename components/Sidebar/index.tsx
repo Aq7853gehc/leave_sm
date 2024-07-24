@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { MouseEventHandler, useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { FaHistory } from "react-icons/fa";
 import { LuHome } from "react-icons/lu";
@@ -22,13 +22,14 @@ import { Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 
+
 const Sidebar = () => {
   const [close, setClose] = useState<Boolean>(false);
   const routes = useRouter()
   const path = usePathname();
   return (
     <aside
-      className={`relative pt-2  sm:flex flex-col border h-screen min-w-[18rem]  shadow`}
+      className={`relative pt-2  sm:flex flex-col border h-screen max-w-full md:min-w-[18rem]  shadow`}
     >
     
       
@@ -54,8 +55,9 @@ const Sidebar = () => {
         </div>
 
         <div className="  rounded-3xl  flex justify-center items-center flex-col">
+          {/* Edit  */}
           <p className="text-blue-400 dark:text-blue-300  font-medium text-sm cursor-pointer" onClick={()=>routes.push("/user/setting")}>EDIT</p>
-
+          {/* Profile Name */}
           <h1 className="text-3xl md:text-2xl font-semibold">Ritik Kohli</h1>
           <p className="text-gray-600 text-xl md:text-base font-medium">
             ID 123-456-789
