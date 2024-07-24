@@ -33,7 +33,7 @@ const Iconbar = () => {
 
       <Separator className="my-2" />
       {/* Icons for links */}
-      <div className="w-full flex flex-col gap-3 items-center h-[75vh]">
+      <div className="w-full flex flex-col gap-3 items-center h-[74vh]">
         <TooltipProvider>
           {/* Dashboard */}
           <Tooltip>

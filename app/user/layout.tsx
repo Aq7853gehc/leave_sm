@@ -43,7 +43,7 @@ export default function User({ children }: { children: ReactNode }) {
         </div>
         <div className="flex  overflow-hidden bg-white dark:bg-black dark:text-white">
           {show ? (
-            <div className="flex border md:w-fit z-50 absolute md:relative bg-white dark:bg-black ">
+            <div className="flex  md:w-fit z-50 absolute md:relative bg-white dark:bg-black ">
               <Sidebar />
 
               <Ellipsis
@@ -52,7 +52,7 @@ export default function User({ children }: { children: ReactNode }) {
               />
             </div>
           ) : (
-            <div className="md:flex flex-col hidden w-[3.5rem] items-center h-screen border rounded-xl py-2">
+            <div className="md:flex flex-col hidden w-[3.5rem] items-center h-screen border rounded-xl py-2 mr-3">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
