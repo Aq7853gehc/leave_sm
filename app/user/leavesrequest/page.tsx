@@ -59,167 +59,172 @@ const LeaveRequest: React.FC = () => {
   };
 
   return (
-    <div className="h-screen w-full flex flex-col overflow-scroll">
+    <div className="min-h-screen h-full relative w-full flex flex-col overflow-scroll">
       <h1 className="text-4xl font-bold">Leaves Request</h1>
       <p className="text-base text-gray-500">Here apply for leaves</p>
       <Separator className="mb-1" />
-      <div className="flex w-full h-full items-center py-5 flex-col">
-        <div className="mx-auto w-full max-w-2xl p-3 border-2 rounded-lg border-gray-300 dark:border-input">
-          <form>
-            <div className="mb-3">
-              <label
-                htmlFor="leaveType"
-                className="mb-1 block text-base font-medium text-[#07074D] dark:text-white"
-              >
-                Leave Types
-              </label>
-              <select
-                className="w-full rounded-md border border-input bg-background py-3 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md"
-                name="leaveType"
-                id="leaveType"
-                value={formData.leaveType}
-                onChange={handleLeaveTypeChange}
-              >
-                <option value="">Select Leave Type</option>
-                <option value="annual">Annual Leave</option>
-                <option value="sick">Sick Leave</option>
-                <option value="maternity">Maternity Leave</option>
-                <option value="paternity">Paternity Leave</option>
-                <option value="parental">Parental Leave</option>
-                <option value="half">Half Day Leave</option>
-                <option value="compassionate">Compassionate Leave</option>
-                <option value="personal">Personal Leave</option>
-                <option value="short">Short Leave</option>
-                <option value="study">Study Leave</option>
-                <option value="medical">Medical Leave</option>
-                <option value="publicHoliday">Public Holiday Leave</option>
-                <option value="others">Others</option>
-              </select>
-            </div>
-            <div className="-mx-3 flex flex-wrap">
-              <div className="w-full px-3 sm:w-1/2">
-                <div className="mb-5">
-                  <label
-                    htmlFor="startDate"
-                    className="mb-1 block text-base font-medium text-[#07074D] dark:text-white"
-                  >
-                    Start Date
-                  </label>
-                  <Input
-                    type="date"
-                    id="startDate"
-                    name="startDate"
-                    value={formData.startDate}
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-              <div className="w-full px-3 sm:w-1/2">
-                <div className="mb-5">
-                  <label
-                    htmlFor="endDate"
-                    className="mb-1 block text-base font-medium text-[#07074D] dark:text-white"
-                  >
-                    End Date
-                  </label>
-                  <Input
-                    type="date"
-                    id="endDate"
-                    name="endDate"
-                    value={formData.endDate}
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-            </div>
-            {formData.leaveType === "short" && (
-              <div className="-mx-3 flex flex-wrap">
-                <div className="w-full px-3 sm:w-1/2">
-                  <div className="mb-5">
-                    <label
-                      htmlFor="startTime"
-                      className="mb-1 block text-base font-medium text-[#07074D] dark:text-white"
-                    >
-                      Start Time
-                    </label>
-                    <Input
-                      type="time"
-                      id="startTime"
-                      name="startTime"
-                      value={formData.startTime}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-                <div className="w-full px-3 sm:w-1/2">
-                  <div className="mb-5">
-                    <label
-                      htmlFor="endTime"
-                      className="mb-1 block text-base font-medium text-[#07074D] dark:text-white"
-                    >
-                      End Time
-                    </label>
-                    <Input
-                      type="time"
-                      id="endTime"
-                      name="endTime"
-                      value={formData.endTime}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-              </div>
-            )}
-            <div className="mb-5">
-              <label
-                htmlFor="alternatePhoneNumber"
-                className="mb-1 block text-base font-medium text-[#07074D] dark:text-white"
-              >
-                Alternate Phone Number (optional)
-              </label>
-              <Input
-                placeholder="Enter your phone number"
-                type="tel"
-                name="alternatePhoneNumber" // Fixed name
-                id="alternatePhoneNumber"
-                value={formData.alternatePhoneNumber}
-                onChange={handleChange}
-              />
-            </div>
-            {formData.leaveType === "medical" && (
-              <div className="mb-2">
+      <div className="flex w-full  items-center py-3 flex-col relative ">
+        <div className="mx-auto w-full relative p-3 md:border-2 rounded-lg border-gray-300 dark:border-input md:h-[85vh] ">
+          <form className="flex justify-between flex-col h-full">
+            <div className="flex justify-between flex-col">
+              <div className="mb-3 md:flex md:justify-between">
                 <label
-                  htmlFor="document"
-                  className="mb-1 block text-base font-medium text-[#07074D] dark:text-white"
+                  htmlFor="leaveType"
+                  className="mb-1 block text-base md:text-xl font-medium text-[#07074D] dark:text-white"
                 >
-                  Upload Documents (if any)
+                  Leave Types
                 </label>
-                <input
-                  className="mb-1 block text-base w-56 font-medium text-[#07074D] dark:text-white"
-                  id="document"
-                  type="file"
-                  name="document"
-                  onChange={handleFileChange}
-                  accept=".pdf,.doc,.docx"
+                <select
+                  className="w-full rounded-md border border-input bg-background py-3 px-3 md:text-lg font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md max-w-3xl"
+                  name="leaveType"
+                  id="leaveType"
+                  value={formData.leaveType}
+                  onChange={handleLeaveTypeChange}
+                >
+                  <option value="">Select Leave Type</option>
+                  <option value="annual">Annual Leave</option>
+                  <option value="sick">Sick Leave</option>
+                  <option value="maternity">Maternity Leave</option>
+                  <option value="paternity">Paternity Leave</option>
+                  <option value="parental">Parental Leave</option>
+                  <option value="half">Half Day Leave</option>
+                  <option value="compassionate">Compassionate Leave</option>
+                  <option value="personal">Personal Leave</option>
+                  <option value="short">Short Leave</option>
+                  <option value="study">Study Leave</option>
+                  <option value="medical">Medical Leave</option>
+                  <option value="publicHoliday">Public Holiday Leave</option>
+                  <option value="others">Others</option>
+                </select>
+              </div>
+              <div className="-mx-3  ">
+                <div className="w-full px-3 ">
+                  <div className="mb-5 md:flex md:justify-between w-full">
+                    <label
+                      htmlFor="startDate"
+                      className="mb-1 block text-base md:text-xl font-medium text-[#07074D] dark:text-white"
+                    >
+                      Start Date
+                    </label>
+                    <Input
+                      type="date"
+                      id="startDate"
+                      name="startDate"
+                      value={formData.startDate}
+                      onChange={handleChange}
+                      className="max-w-3xl md:text-lg "
+                    />
+                  </div>
+                </div>
+                <div className="w-full px-3 ">
+                  <div className="mb-5 md:flex md:justify-between">
+                    <label
+                      htmlFor="endDate"
+                      className="mb-1 block md:text-xl font-medium text-[#07074D] dark:text-white"
+                    >
+                      End Date
+                    </label>
+                    <Input
+                      type="date"
+                      id="endDate"
+                      name="endDate"
+                      value={formData.endDate}
+                      onChange={handleChange}
+                      className="max-w-3xl md:text-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+              {formData.leaveType === "short" && (
+                <div className="-mx-3 ">
+                  <div className="w-full px-3">
+                    <div className="mb-5 md:flex md:justify-between">
+                      <label
+                        htmlFor="startTime"
+                        className="mb-1 block md:text-xl font-medium text-[#07074D] dark:text-white"
+                      >
+                        Start Time
+                      </label>
+                      <Input
+                        type="time"
+                        id="startTime"
+                        name="startTime"
+                        value={formData.startTime}
+                        onChange={handleChange}
+                        className="max-w-3xl md:text-lg"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-3 ">
+                    <div className="mb-5 md:flex md:justify-between">
+                      <label
+                        htmlFor="endTime"
+                        className="mb-1 block  md:text-xl font-medium text-[#07074D] dark:text-white"
+                      >
+                        End Time
+                      </label>
+                      <Input
+                        type="time"
+                        id="endTime"
+                        name="endTime"
+                        value={formData.endTime}
+                        onChange={handleChange}
+                        className="max-w-3xl md:text-lg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+              <div className="mb-5 md:flex md:justify-between">
+                <label
+                  htmlFor="alternatePhoneNumber"
+                  className="mb-1 block md:text-xl font-medium text-[#07074D] dark:text-white"
+                >
+                  Alternate Phone Number (optional)
+                </label>
+                <Input
+                  placeholder="Enter your phone number"
+                  type="tel"
+                  name="alternatePhoneNumber" // Fixed name
+                  id="alternatePhoneNumber"
+                  value={formData.alternatePhoneNumber}
+                  onChange={handleChange}
+                  className="max-w-3xl md:text-lg"
                 />
               </div>
-            )}
-            <div className="mb-2 pt-3">
-              <label className="mb-2 block text-base text-[#07074D] dark:text-white sm:text-xl">
-                Reason for Leave
-              </label>
-              <div className="flex flex-wrap">
-                <div className="w-full sm:w-full">
-                  <Textarea
-                    placeholder="Type reason here..."
-                    name="leaveReason"
-                    value={formData.leaveReason}
-                    onChange={handleChange}
+              {formData.leaveType === "medical" && (
+                <div className="mb-2 md:flex md:justify-between">
+                  <label
+                    htmlFor="document"
+                    className="mb-1 block md:text-xl font-medium text-[#07074D] dark:text-white"
+                  >
+                    Upload Documents (if any)
+                  </label>
+                  <Input
+                    className="max-w-3xl md:text-lg "
+                    id="document"
+                    type="file"
+                    name="document"
+                    onChange={handleFileChange}
+                    accept=".pdf,.doc,.docx"
                   />
                 </div>
+              )}
+              <div className="mb-2 pt-3 md:flex md:justify-between">
+                <label className="mb-2 block md:text-xl font-medium text-[#07074D] dark:text-white ">
+                  Reason for Leave
+                </label>
+
+                <Textarea
+                  placeholder="Type reason here..."
+                  name="leaveReason"
+                  value={formData.leaveReason}
+                  onChange={handleChange}
+                  className="max-w-3xl"
+                />
               </div>
             </div>
-            <div className="flex flex-wrap justify-around">
+            <div className="flex flex-wrap justify-around flex-col md:flex-row gap-3 ">
               <Button variant="destructive" type="reset">
                 Cancel Request
               </Button>
