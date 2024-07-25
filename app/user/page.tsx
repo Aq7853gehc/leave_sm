@@ -22,12 +22,15 @@ const Users = () => {
         </p>
       </div>
       <Separator className="my-2" />
-      <div className="relative flex flex-wrap items-center max-md:ml-4 my-4 justify-around gap-3 w-full pb-2 pr-7  ">
-
+      <div className="relative  flex flex-wrap items-center max-md:ml-4 my-4 justify-around gap-3 w-full  ">
         {bal.map((itmes) => (
-          <div className="relative w-[18rem] h-[12rem] flex flex-col  justify-center items-center  p-4 transition-all duration-150  shadow-md dark:shadow-white rounded-xl cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white"
-            onClick={() => routes.push("/user/leavebalance")}>
-            <p className=" font-bold text-2xl md:text-3xl ">{itmes.leaveType}</p>
+          <div
+            className="relative  flex flex-col  justify-center items-center  p-4 transition-all duration-150  shadow-md dark:shadow-white rounded-xl cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white"
+            onClick={() => routes.push("/user/leavebalance")}
+          >
+            <p className=" font-bold text-2xl md:text-3xl ">
+              {itmes.leaveType}
+            </p>
             <h1 className="md:text-2xl mt-2 text-xl text-gray-600 font-bold">
               {itmes.used} /{" "}
               <span className="font-semibold">{itmes.total}</span>{" "}
@@ -36,8 +39,7 @@ const Users = () => {
             <p className="text-gray-500 text-xs">{itmes.text}</p>
           </div>
         ))}
-        <div className="relative w-[18rem] h-[12rem] flex flex-col justify-center items-center p-4 rounded-xl shadow-md  dark:shadow-white">
-
+        <div className="relative w-[18rem]  flex flex-col justify-center items-center  rounded-xl shadow-md  dark:shadow-white">
           <p className="font-bold text-2xl md:text-3xl ">Total Balance</p>
           <h1 className="md:text-2xl mt-2 text-xl text-gray-600 font-bold">
             45 <span>days</span>
@@ -45,25 +47,34 @@ const Users = () => {
           <p className="text-gray-500 text-xs">forward to next year</p>
         </div>
       </div>
+      {/* second division */}
 
-
-
-      <div className="flex  pt-2  max-lg:flex-col w-full h-[100vw] scrorr">
-        <div className="lg:w-1/3 w-full flex gap-5 justify-center items-center flex-col px-4  py-4">
+      <div className="flex ">
+        <div className="md:w-1/3 w-full flex gap-10  items-center flex-col   border">
           {/* Charts of status */}
-          <div className="w-full flex justify-center items-center flex-col relative">
+
+
+
+          <div className="w-full flex justify-center  flex-col relative border">
             <h1 className="md:text-4xl text-2xl font-bold ">
               Status of Leaves
             </h1>
-            <p className="md:text-lg text-sm">This is the status of last 50 days</p>
+            <p className="md:text-lg text-sm">
+              This is the status of last 50 days
+            </p>
           </div>
           <ChartDemo className="md:w-[30rem] w-[20rem] h-[20rem] flex items-center justify-center text-center md:h-[25rem] " />
         </div>
-        <div className="w-full flex gap-5 justify-center items-center flex-col px-4  py-4">
+        <div className="w-full flex-1 flex gap-5 justify-center items-center flex-col px-4  ">
           {/* recent applied */}
-          <div className="w-full flex justify-center items-center flex-col relative">
+
+
+
+          <div className="w-full flex justify-center  flex-col relative">
             <h1 className="sm:text-4xl text-2xl font-bold ">Recent Applied </h1>
-            <p className="md:text-lg text-sm">This is the list of recent applied with in 10 days</p>
+            <p className="md:text-lg text-sm">
+              This is the list of recent applied with in 10 days
+            </p>
           </div>
           <ListLeave className="w-full" />
         </div>
