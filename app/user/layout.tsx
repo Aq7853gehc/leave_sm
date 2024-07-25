@@ -17,7 +17,7 @@ export default function User({ children }: { children: ReactNode }) {
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
       <main className="">
-        <div className="flex md:hidden w-full border justify-between items-center">
+        <div className=" flex md:hidden w-full border justify-between items-center">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
@@ -33,8 +33,12 @@ export default function User({ children }: { children: ReactNode }) {
                   />
                 )}
               </TooltipTrigger>
-              <TooltipContent side="bottom">
-                <h1>Menu</h1>
+              <TooltipContent side="bottom" asChild>
+              {show ? (
+                 <h1>Close</h1>
+                ) : (
+                  <h1>Menu</h1>
+                )}
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -43,7 +47,7 @@ export default function User({ children }: { children: ReactNode }) {
         </div>
         <div className="flex  overflow-hidden bg-white dark:bg-black dark:text-white">
           {show ? (
-            <div className="flex  md:w-fit z-50 absolute md:relative bg-white dark:bg-black ">
+            <div className="flex  md:w-fit z-40 absolute md:relative bg-white dark:bg-black ">
               <Sidebar />
 
               <Ellipsis
