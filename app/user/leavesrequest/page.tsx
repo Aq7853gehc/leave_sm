@@ -64,9 +64,9 @@ const LeaveRequest: React.FC = () => {
       <h1 className="text-4xl font-bold">Leaves Request</h1>
       <p className="text-base text-gray-500">Here apply for leaves</p>
       <Separator className="mb-1" />
-      <div className="flex w-full h-full  py-5 gap-20 px-3">
-        <div className="w-full max-w-2xl p-3 sm:max-w-3xl lg:max-w-2xl rounded border-gray-300 dark:border-input">
-          <form className="h-[60vh]">
+      <div className="flex w-full h-full  py-20 gap-20 px-3">
+        <div className="w-full max-w-2xl  sm:max-w-3xl lg:max-w-2xl rounded border-gray-300 dark:border-input">
+          <form className="">
             <div className="mb-3">
               <label
                 htmlFor="leaveType"
@@ -219,7 +219,7 @@ const LeaveRequest: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-8 flex flex-wrap md:justify-between  md:flex-col gap-5 ">
+            <div className="mt-8 flex flex-wrap md:justify-between  flex-col gap-5 ">
               <Button variant="destructive" type="reset">
                 Cancel Request
               </Button>
@@ -235,7 +235,7 @@ const LeaveRequest: React.FC = () => {
             </div>
           </form>
         </div>
-        <div className="bg-gray-300/20 dark:bg-transparent rounded-md w-fit  flex items-center">
+        <div className="bg-gray-300/20 dark:bg-transparent rounded-md w-fit hidden md:block">
           <Image
             src={"/request.svg"}
             alt="img"
