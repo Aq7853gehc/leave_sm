@@ -13,7 +13,7 @@ import {
 import { ThemeProvider } from "@/components/theme-provider";
 import ThemeToggle from "@/components/ThemeToggle";
 export default function User({ children }: { children: ReactNode }) {
-  const [show, setShow] = useState<boolean>(false);
+  const [show, setShow] = useState<boolean>(true);
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
       <main className="max-h-screen">
