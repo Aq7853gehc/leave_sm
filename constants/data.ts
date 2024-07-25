@@ -31,14 +31,7 @@ export const bal: Balance[] = [
     rules:
       "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
   },
-  {
-    leaveType: "Marriage Leave",
-    used: 5,
-    total: 10,
-    text: "taken from this year",
-    rules:
-      "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
-  },
+
 ];
 
 export const chart: Chart = {
