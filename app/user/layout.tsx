@@ -16,7 +16,7 @@ export default function User({ children }: { children: ReactNode }) {
   const [show, setShow] = useState<boolean>(false);
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
-      <main className="">
+      <main className="max-h-screen">
         <div className=" flex md:hidden w-full border justify-between items-center">
           <TooltipProvider>
             <Tooltip>
