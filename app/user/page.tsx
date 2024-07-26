@@ -113,7 +113,7 @@ const Users = () => {
       <div className="relative flex flex-wrap items-center max-md:ml-4 my-4 justify-around gap-5 w-full pb-2 pr-7  ">
 
         {bal.map((itmes) => (
-          <div className="relative w-[24rem] h-[12rem] flex flex-col  justify-center items-center  p-4 transition-all duration-150  shadow-md dark:shadow-white rounded-xl cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white"
+          <div className="relative w-[20rem] h-[12rem] flex flex-col  justify-center items-center  p-4 transition-all duration-150  shadow-md dark:shadow-white rounded-xl cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white"
             onClick={() => routes.push("/user/leavebalance")}>
             <p className=" font-bold text-xl md:text-2xl ">{itmes.leaveType}</p>
             <h1 className="md:text-lg mt-2 text-md text-gray-600 font-bold">
@@ -152,7 +152,7 @@ const Users = () => {
             </h1>
             <p className="md:text-lg text-sm">This is the status of last 50 days</p>
           </div>
-          <ChartDemo className="md:w-[30rem] w-[20rem] h-[20rem] flex items-center justify-center text-center md:h-[25rem] " />
+          <ChartDemo className="mt-5 md:w-[30rem] w-[20rem] h-[20rem] flex items-center justify-center text-center md:h-[25rem] " />
         </div>
         <div className="w-full flex gap-5 justify-center items-center flex-col px-4  py-4">
           {/* recent applied */}
