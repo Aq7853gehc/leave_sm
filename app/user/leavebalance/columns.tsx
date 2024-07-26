@@ -13,34 +13,17 @@ import { BiDownArrow } from "react-icons/bi";
 export const balanceColumns: ColumnDef<Balance>[] = [
   {
     accessorKey: "leaveType",
-    header: () => <div className="text-black font-bold">Leave Type</div>,
+    header: () => <div className="text-black dark:text-white font-bold">Leave Type</div>,
   },
   {
     accessorKey: "used",
-    header: () => <div className="text-black font-bold">Leaves Used</div>,
+    header: () => <div className="text-black dark:text-white font-bold">Leaves Used</div>,
     cell: ({ row }) => <div className="px-2">{row.getValue("used")}</div>,
   },
   {
     accessorKey: "total",
-    header: () => <div className="text-black font-bold">Total leaves</div>,
+    header: () => <div className="text-black dark:text-white font-bold">Total leaves</div>,
     cell: ({ row }) => <div className="px-2">{row.getValue("total")}</div>,
   },
-  {
-    accessorKey: "rules",
-    header:()=>(
-      <div className="text-black font-bold">Rules</div>
-    ),
-    cell: ({ row }) => (
-      <div>
-        <Accordion type="single" collapsible>
-          <AccordionItem value="item-1">
-            <AccordionTrigger/>
-            <AccordionContent>
-             {row.getValue("rules")}
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </div>
-    ),
-  },
+  
 ];
