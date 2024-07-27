@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import React from "react";
+import React, { useState } from "react";
 export const profile = {
   // Personal Information
   personal: {
@@ -65,6 +65,8 @@ const dateFormat = (dateString: string) => {
   return new Date(dateString).toLocaleDateString();
 };
 const ProfileAI = () => {
+  const [open, setOpen] = useState(true);
+
   return (
     <div>
       <div className="max-h-[92vh] overflow-scroll no-scrollbar">
@@ -102,69 +104,70 @@ const ProfileAI = () => {
         {/* Accordians  */}
 
         <div className="mb-3 border sm:p-2 sm:pl-8 p-2 shadow-md dark:shadow-white  rounded-lg">
-          <Accordion type="single" collapsible>
-            <AccordionItem value="Personal Information">
-              <AccordionTrigger asChild>
-                <h2 className="text-2xl font-bold max-md:text-xl text-blue-600 mb-2">
-                  Personal Information
-                </h2>
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="flex mb-2">
-                  <span className="sm:w-1/3 w-3/4 text-lg max-md:text-sm text-gray-600 dark:text-gray-200/70">
-                    Name:
-                  </span>
-                  <span className="sm:w-2/3 text-lg max-md:text-sm w-full">
-                    {profile.personal.name.firstName}{" "}
-                    {profile.personal.name.lastName}
-                  </span>
-                </div>
-                <div className="flex mb-2">
-                  <span className="sm:w-1/3 w-3/4 text-lg max-md:text-sm  text-gray-600 dark:text-gray-200/70">
-                    Date of Birth:
-                  </span>
-                  <span className="sm:w-2/3 text-lg max-md:text-sm w-full">
-                    {dateFormat(profile.personal.dob)}
-                  </span>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-          <div className="flex mb-2">
-            <span className="sm:w-1/3  w-3/4 text-lg max-md:text-sm text-gray-600 dark:text-gray-200/70">
-              Gender:
-            </span>
-            <span className="sm:w-2/3 text-lg max-md:text-sm w-full">
-              {profile.personal.gender}
-            </span>
-          </div>
-          <div className="flex mb-2">
-            <span className="sm:w-1/3 text-lg max-md:text-sm w-3/4 text-gray-600 dark:text-gray-200/70">
-              Phone No:
-            </span>
-            <span className=" sm:w-2/3 text-lg max-md:text-sm w-full">
-              {profile.personal.contact.phone}
-            </span>
-          </div>
-          <div className="flex mb-2">
-            <span className="sm:w-1/3 text-lg max-md:text-sm w-3/4 text-gray-600 dark:text-gray-200/70">
-              Email:
-            </span>
-            <span className=" sm:w-2/3 text-lg max-md:text-sm w-full">
-              {profile.personal.contact.email}
-            </span>
-          </div>
-
-          <div className="flex mb-2">
+          <h2
+            className="text-2xl font-bold max-md:text-xl text-blue-600 mb-2 cursor-pointer"
+            onClick={() => setOpen(!open)}
+          >
+            Personal Information
+          </h2>
+          <div className={` mb-2 flex`}>
             <span className="sm:w-1/3 w-3/4 text-lg max-md:text-sm text-gray-600 dark:text-gray-200/70">
-              Address:
+              Name:
             </span>
             <span className="sm:w-2/3 text-lg max-md:text-sm w-full">
-              {profile.personal.address}
+              {profile.personal.name.firstName} {profile.personal.name.lastName}
             </span>
+          </div>
+          <div
+            className={`transition-all duration-150 ${
+              open ? "block" : "hidden"
+            }`}
+          >
+            <div className="flex mb-2">
+              <span className="sm:w-1/3 w-3/4 text-lg max-md:text-sm  text-gray-600 dark:text-gray-200/70">
+                Date of Birth:
+              </span>
+              <span className="sm:w-2/3 text-lg max-md:text-sm w-full">
+                {dateFormat(profile.personal.dob)}
+              </span>
+            </div>
+
+            <div className="flex mb-2">
+              <span className="sm:w-1/3  w-3/4 text-lg max-md:text-sm text-gray-600 dark:text-gray-200/70">
+                Gender:
+              </span>
+              <span className="sm:w-2/3 text-lg max-md:text-sm w-full">
+                {profile.personal.gender}
+              </span>
+            </div>
+            <div className="flex mb-2">
+              <span className="sm:w-1/3 text-lg max-md:text-sm w-3/4 text-gray-600 dark:text-gray-200/70">
+                Phone No:
+              </span>
+              <span className=" sm:w-2/3 text-lg max-md:text-sm w-full">
+                {profile.personal.contact.phone}
+              </span>
+            </div>
+            <div className="flex mb-2">
+              <span className="sm:w-1/3 text-lg max-md:text-sm w-3/4 text-gray-600 dark:text-gray-200/70">
+                Email:
+              </span>
+              <span className=" sm:w-2/3 text-lg max-md:text-sm w-full">
+                {profile.personal.contact.email}
+              </span>
+            </div>
+
+            <div className="flex mb-2">
+              <span className="sm:w-1/3 w-3/4 text-lg max-md:text-sm text-gray-600 dark:text-gray-200/70">
+                Address:
+              </span>
+              <span className="sm:w-2/3 text-lg max-md:text-sm w-full">
+                {profile.personal.address}
+              </span>
+            </div>
           </div>
         </div>
-        <div className="mb-3 border shadow-md dark:shadow-white sm:p-4 sm:pl-8 p-2 rounded-lg ">
+        {/* <div className="mb-3 border shadow-md dark:shadow-white sm:p-4 sm:pl-8 p-2 rounded-lg ">
           <h2 className="text-2xl font-bold max-md:text-xl mb-2 text-blue-600">
             Experience Information
           </h2>
@@ -188,7 +191,7 @@ const ProfileAI = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
         <div className="sm:mb-3 border shadow-md dark:shadow-white  sm:p-4  sm:pl-8 p-2 rounded-lg">
           <h2 className="text-2xl max-md:text-xl font-bold  text-blue-600 mb-2">
             Education Information

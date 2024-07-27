@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const roboto = Roboto({
+const roboto = Poppins({
   weight: ['400', '700'],
   subsets: ['latin'],
 });
