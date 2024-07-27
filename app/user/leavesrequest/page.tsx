@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
+import Image from "next/image";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
@@ -59,13 +60,13 @@ const LeaveRequest: React.FC = () => {
   };
 
   return (
-    <div className="h-screen w-full flex flex-col overflow-scroll">
+    <div className="h-screen w-full flex flex-col ">
       <h1 className="text-4xl font-bold">Leaves Request</h1>
       <p className="text-base text-gray-500">Here apply for leaves</p>
       <Separator className="mb-1" />
-      <div className="flex w-full h-full items-center py-5 flex-col">
-        <div className="mx-auto w-full max-w-2xl p-3 border-2 rounded-lg border-gray-300 dark:border-input">
-          <form>
+      <div className="flex w-full h-full  py-20 gap-20 px-3 justify-center">
+        <div className="w-full max-w-2xl  sm:max-w-3xl lg:max-w-2xl rounded border-gray-300 dark:border-input">
+          <form className="">
             <div className="mb-3">
               <label
                 htmlFor="leaveType"
@@ -194,8 +195,7 @@ const LeaveRequest: React.FC = () => {
                 >
                   Upload Documents (if any)
                 </label>
-                <input
-                  className="mb-1 block text-base w-56 font-medium text-[#07074D] dark:text-white"
+                <Input
                   id="document"
                   type="file"
                   name="document"
@@ -219,7 +219,7 @@ const LeaveRequest: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap justify-around">
+            <div className="mt-8 flex flex-wrap md:justify-between  flex-col gap-5 ">
               <Button variant="destructive" type="reset">
                 Cancel Request
               </Button>
@@ -234,6 +234,15 @@ const LeaveRequest: React.FC = () => {
               </Button>
             </div>
           </form>
+        </div>
+        <div className="rounded-md w-fit hidden md:block">
+          <Image
+            src={"/request.svg"}
+            alt="img"
+            width={0}
+            height={0}
+            className="object-cover w-fit h-fit "
+          />
         </div>
       </div>
     </div>

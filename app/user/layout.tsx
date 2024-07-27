@@ -13,7 +13,7 @@ import {
 import { ThemeProvider } from "@/components/theme-provider";
 import ThemeToggle from "@/components/ThemeToggle";
 export default function User({ children }: { children: ReactNode }) {
-  const [show, setShow] = useState<boolean>(false);
+  const [show, setShow] = useState<boolean>(true);
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
       <main className="max-h-screen">
@@ -56,7 +56,7 @@ export default function User({ children }: { children: ReactNode }) {
               />
             </div>
           ) : (
-            <div className="md:flex flex-col hidden w-[3.5rem] items-center h-screen border rounded-xl py-2 mr-3">
+            <div className="md:flex flex-col gap-3 hidden w-[3.5rem] items-center h-screen border rounded-xl py-2 mr-3">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>

@@ -100,7 +100,7 @@ const Users = () => {
   return (
     <section className=" flex flex-col  w-full pt-2 h-screen overflow-x-hidden no-scrollbar">
       <div className="flex sm:flex-row justify-between items-center sm:pr-3 flex-col sm:px-4 pr-5">
-        <h1 className="sm:text-4xl  text-3xl font-bold ">Dashboard</h1>
+        <h1 className="sm:text-4xl mt-2 text-3xl font-bold ">Dashboard</h1>
         {/* <div className="flex ml-[75%] w-16 h-16 rounded-[50%] bg-slate-500"></div> */}
         <p
           onClick={() => routes.push("/user/leavesrequest")}
@@ -110,10 +110,28 @@ const Users = () => {
         </p>
       </div>
       <Separator className="my-2" />
-      <div className="relative flex flex-wrap items-center max-md:ml-4 my-4 justify-around gap-5 w-full pb-2 pr-7  ">
+      <div className="flex flex-wrap items-center max-md:ml-4 my-4 justify-evenly gap-5 w-full pb-2 pr-7  ">
+          {bal.map((itmes) => (
+            <div
+              className=" max-[800px]:w-[20rem] max-[800px]:h-[20rem] max-[1180px]:h-[14rem] max-[1180px]:w-[14rem] w-[16rem] h-[16rem]  flex flex-col  justify-center items-center  p-4 transition-all duration-150  shadow-md dark:shadow-white rounded-full cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white"
+            
+            >
+              <p className=" font-bold text-xl md:text-2xl ">
+                {itmes.leaveType}
+              </p>
+              <h1 className="md:text-lg mt-2 text-md text-gray-600 font-bold">
+                {itmes.used} /{" "}
+                <span className="font-semibold">{itmes.total}</span>{" "}
+                <span>days</span>
+              </h1>
+              <p className="text-gray-500 text-xs">{itmes.text}</p>
+            </div>
+          ))}
+          </div>
+      {/* <div className="relative flex flex-wrap items-center max-md:ml-4 my-4 justify-around gap-5 w-full pb-2 pr-7  ">
 
         {bal.map((itmes) => (
-          <div className="relative w-[24rem] h-[12rem] flex flex-col  justify-center items-center  p-4 transition-all duration-150  shadow-md dark:shadow-white rounded-xl cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white"
+          <div className="relative w-[20rem] h-[12rem] flex flex-col  justify-center items-center  p-4 transition-all duration-150  shadow-md dark:shadow-white rounded-xl cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white"
             onClick={() => routes.push("/user/leavebalance")}>
             <p className=" font-bold text-xl md:text-2xl ">{itmes.leaveType}</p>
             <h1 className="md:text-lg mt-2 text-md text-gray-600 font-bold">
@@ -124,15 +142,15 @@ const Users = () => {
             <p className="text-gray-500 text-xs">{itmes.text}</p>
           </div>
         ))}
-        {/* <div className="relative w-[24rem] h-[12rem] flex flex-col justify-center items-center p-4 rounded-xl shadow-md  dark:shadow-white">
+        <div className="relative w-[24rem] h-[12rem] flex flex-col justify-center items-center p-4 rounded-xl shadow-md  dark:shadow-white">
 
           <p className="font-bold text-xl md:text-2xl ">Total Balance</p>
           <h1 className="md:text-lg mt-2 text-md text-gray-600 font-bold">
             45 <span>days</span>
           </h1>
           <p className="text-gray-500 text-xs">forward to next year</p>
-        </div> */}
-      </div>
+        </div>
+      </div> */}
       <div className="w-full">
         <div className=" flex flex-col justify-center border items-center p-4 rounded-lg">
           <p className="font-bold text-xl  md:text-2xl ">Total Balance</p>
@@ -152,7 +170,7 @@ const Users = () => {
             </h1>
             <p className="md:text-lg text-sm">This is the status of last 50 days</p>
           </div>
-          <ChartDemo className="md:w-[30rem] w-[20rem] h-[20rem] flex items-center justify-center text-center md:h-[25rem] " />
+          <ChartDemo className="mt-5 md:w-[30rem] w-[20rem] h-[20rem] flex items-center justify-center text-center md:h-[25rem] " />
         </div>
         <div className="w-full flex gap-5 justify-center items-center flex-col px-4  py-4">
           {/* recent applied */}
