@@ -1,18 +1,18 @@
+
 import { Separator } from "@/components/ui/separator";
 import { bal } from "@/constants/data";
 import React from "react";
 import { DataTable } from "./data-table";
 import { balanceColumns } from "./columns";
-
 const LeaveBalance = () => {
   return (
     <div className="flex flex-col w-full">
-      <h1 className="text-4xl font-black">Leaves Balance</h1>
-      <p className="text-base text-gray-500">Here your's balances of leaves</p>
+      <h1 className="text-4xl font-black mt-2 ml-5">Leaves Balance</h1>
+      <p className="text-base text-gray-500 mt-1 ml-5">Here your's balances of leaves</p>
       <Separator className="my-2" />
       <div>
         {/* Balanced here*/}
-        <div className="relative flex flex-wrap items-center  justify-around  gap-5 w-full pb-2  pr-7 no-scrollbar ">
+        {/* <div className="relative flex flex-wrap items-center  justify-around  gap-5 w-full pb-2  pr-7 no-scrollbar ">
           {bal.map((itmes) => (
             <div className="relative min-w-[10rem]  flex flex-col  justify-center  p-4 transition-all duration-150  border rounded-xl cursor-pointer hover:shadow-lg hover:border-black">
               <p className=" font-medium ">{itmes.leaveType}</p>
@@ -24,8 +24,34 @@ const LeaveBalance = () => {
               <p className="text-gray-500 text-xs">{itmes.text}</p>
             </div>
           ))}
+        </div> */}
+        <div className="flex flex-wrap items-center max-md:ml-4 my-4 justify-evenly gap-5 w-full pb-2 pr-7  ">
+          {bal.map((itmes) => (
+            <div
+              className=" w-[20rem] h-[20rem] md:w-[16rem] rounded-full md:h-[16rem] flex flex-col  justify-center items-center  p-4 transition-all duration-150  shadow-md dark:shadow-white  cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white"
+            
+            >
+              <p className=" font-bold text-xl md:text-2xl ">
+                {itmes.leaveType}
+              </p>
+              <h1 className="md:text-lg mt-2 text-md text-gray-600 font-bold">
+                {itmes.used} /{" "}
+                <span className="font-semibold">{itmes.total}</span>{" "}
+                <span>days</span>
+              </h1>
+              <p className="text-gray-500 text-xs">{itmes.text}</p>
+            </div>
+          ))}
+          {/* <div className="relative w-[24rem] h-[12rem] flex flex-col justify-center items-center p-4 rounded-xl shadow-md  dark:shadow-white">
+
+  <p className="font-bold text-xl md:text-2xl ">Total Balance</p>
+  <h1 className="md:text-lg mt-2 text-md text-gray-600 font-bold">
+    45 <span>days</span>
+  </h1>
+  <p className="text-gray-500 text-xs">forward to next year</p>
+</div> */}
         </div>
-        <DataTable columns={balanceColumns} data={bal}/>
+        <DataTable columns={balanceColumns} data={bal} />
       </div>
     </div>
   );
