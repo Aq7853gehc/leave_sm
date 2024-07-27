@@ -67,7 +67,7 @@ const Sidebar = () => {
       <Separator />
 
       {/* Nav links */}
-      <section className=" flex flex-col p-5 gap-2  flex-1 ">
+      <section className=" flex flex-col p-5   flex-1 ">
         {/* List of Link */}
         <Link
           href={"/user"}
