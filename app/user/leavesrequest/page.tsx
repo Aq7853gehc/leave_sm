@@ -6,6 +6,9 @@ import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import { DataTable } from "../leavebalance/data-table";
+import { balanceColumns } from "../leavebalance/columns";
+import { bal } from "@/constants/data";
 
 interface FormData {
   leaveType: string;
@@ -64,7 +67,7 @@ const LeaveRequest: React.FC = () => {
       <h1 className="text-4xl font-bold">Leaves Request</h1>
       <p className="text-base text-gray-500">Here apply for leaves</p>
       <Separator className="mb-1" />
-      <div className="flex w-full h-full  py-20 gap-20 px-3 justify-center">
+      <div className="flex w-full h-full  py-20  px-3 justify-around">
         <div className="w-full max-w-2xl  sm:max-w-3xl lg:max-w-2xl rounded border-gray-300 dark:border-input">
           <form className="">
             <div className="mb-3">
@@ -236,13 +239,14 @@ const LeaveRequest: React.FC = () => {
           </form>
         </div>
         <div className="rounded-md w-fit hidden md:block">
-          <Image
+          {/* <Image
             src={"/request.svg"}
             alt="img"
             width={0}
             height={0}
             className="object-cover w-fit h-fit "
-          />
+          /> */}
+          <DataTable columns={balanceColumns} data={bal} />
         </div>
       </div>
     </div>
