@@ -294,7 +294,7 @@ const Setting = () => {
                   onClick={() => setEdit(!edit)}
                   className="text-white max-sm:w-full max-sm:mr-4 bg-blue-500 p-2 mr-4 rounded-sm "
                 >
-                  Submit Changes
+                  Save Changes
                 </button>
               </div>
             </div>
