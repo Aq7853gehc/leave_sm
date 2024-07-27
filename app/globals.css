@@ -67,3 +67,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+a{
+  @apply rounded flex gap-2
+}
