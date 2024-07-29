@@ -67,7 +67,7 @@ const LeaveRequest: React.FC = () => {
       <h1 className="text-4xl font-bold">Leaves Request</h1>
       <p className="text-base text-gray-500">Here apply for leaves</p>
       <Separator className="mb-1" />
-      <div className="flex w-full h-full  py-20  px-3 justify-around">
+      <div className="flex w-full h-full    px-3 justify-around">
         <div className="w-full max-w-2xl  sm:max-w-3xl lg:max-w-2xl rounded border-gray-300 dark:border-input">
           <form className="">
             <div className="mb-3">

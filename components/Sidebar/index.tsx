@@ -24,7 +24,7 @@ import { useRouter } from "next/navigation";
 
 
 const Sidebar = () => {
-  const [close, setClose] = useState<Boolean>(false);
+    
   const routes = useRouter()
   const path = usePathname();
   return (
