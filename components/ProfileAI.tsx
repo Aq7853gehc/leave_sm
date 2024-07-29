@@ -72,7 +72,7 @@ const ProfileAI = () => {
       <div className="max-h-[92vh] overflow-scroll no-scrollbar">
         <div>
           <div className="mb-3 border shadow-md dark:shadow-white sm:p-4 sm:pl-8 p-2 rounded-lg ">
-            <h2 className="text-2xl font-bold max-md:text-xl mb-2 text-blue-600">
+            <h2 className="text-2xl font-bold max-md:text-xl mb-2 text-blue-600 dark:text-blue-100">
               Department Information
             </h2>
             <div className="flex mb-2">

@@ -29,7 +29,7 @@ const Sidebar = () => {
   const path = usePathname();
   return (
     <aside
-      className={`relative pt-2  sm:flex flex-col border h-screen max-w-full md:min-w-[18rem]  shadow`}
+      className={`relative pt-2  sm:flex flex-col border h-screen  md:min-w-[18rem] min-w-[90vw] backdrop:blur  shadow`}
     >
     
       
@@ -44,13 +44,13 @@ const Sidebar = () => {
  
       <section className="h-[20rem] flex flex-col justify-center gap-2 flex-1 items-center">
         {/* Profile pic and heading */}
-        <div className="rounded-full w-[200px] h-[200px]">
+        <div className="rounded-full w-[200px] h-[200px] border border-black">
           <Image
-            src={"/image_profile.jpg"}
+            src={"/picprofile.jpg"}
             alt="profile"
             width={200}
             height={200}
-            className="rounded-full w-full h-full object-cover border-black  "
+            className="rounded-full w-full h-full object-cover   "
           />
         </div>
 
@@ -67,7 +67,7 @@ const Sidebar = () => {
       <Separator />
 
       {/* Nav links */}
-      <section className=" flex flex-col p-5   flex-1 ">
+      <section className=" flex flex-col pt-5 w-full  flex-1  ">
         {/* List of Link */}
         <Link
           href={"/user"}

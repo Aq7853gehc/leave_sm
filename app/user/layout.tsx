@@ -13,11 +13,12 @@ import {
 import { ThemeProvider } from "@/components/theme-provider";
 import ThemeToggle from "@/components/ThemeToggle";
 export default function User({ children }: { children: ReactNode }) {
-  const [show, setShow] = useState<boolean>(true);
+  const [show, setShow] = useState<boolean>(false);
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
-      <main className="max-h-screen">
-        <div className=" flex md:hidden w-full border justify-between items-center">
+      <main className="max-h-screen ">
+        {/* mobile responsive */}
+        <div className=" flex md:hidden w-full border   bg-background justify-between items-center">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
@@ -28,7 +29,7 @@ export default function User({ children }: { children: ReactNode }) {
                   />
                 ) : (
                   <IoMenu
-                    className="text-3xl dark:text-white"
+                    className="text-3xl  dark:text-white"
                     onClick={() => setShow(!show)}
                   />
                 )}
@@ -45,13 +46,16 @@ export default function User({ children }: { children: ReactNode }) {
           <h1 className="dark:text-white text-black">DBIT</h1>
           <ThemeToggle />
         </div>
+
+        {/* inside md */}
         <div className="flex  overflow-hidden bg-white dark:bg-black dark:text-white">
           {show ? (
-            <div className="flex  md:w-fit z-40 absolute md:relative bg-white dark:bg-black ">
+            <div className="flex  md:w-fit z-30 absolute md:relative bg-white dark:bg-black ">
               <Sidebar />
 
-              <Ellipsis
-                className="z-30 relative left-[-8%] cursor-pointer hidden md:block"
+              <IoClose
+              size={32}
+                className="z-30 relative left-[-10%]  cursor-pointer  md:block"
                 onClick={() => setShow(!show)}
               />
             </div>
