@@ -1,13 +1,14 @@
+
 "use client";
 import { Separator } from "@/components/ui/separator";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getData } from "@/constants/leavesdata";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default async function DemoPage() {
-  const routes = useRouter();
+  const router = useRouter();
   const data = await getData();
   return (
     <div className="mx-auto max-h-screen w-full px-2 h-full no-scrollbar scroll-smooth">
@@ -15,16 +16,13 @@ export default async function DemoPage() {
         <div>
           <h1 className="text-4xl font-black ">Leave History</h1>
           <p className="font-medium text-base text-gray-400">
-            This page is take the history of last years{" "}
+            This page is to view the leave history of the last year
           </p>
         </div>
-        {/* <h2 className="text-2xl font-semibold">
-          Balance: <span className="text-2xl font-medium">43 days</span>
-        </h2> */}
         <div>
           <button
             className="bg-blue-500 p-3 rounded-lg text-white shadow"
-            onClick={() => routes.push("/user/leavebalance")}
+            onClick={() => router.push("/user/leavebalance")}
           >
             View Balance
           </button>
@@ -35,9 +33,12 @@ export default async function DemoPage() {
         <TabsList>
           <TabsTrigger value="all">All</TabsTrigger>
           <TabsTrigger value="approved">Approved</TabsTrigger>
-
           <TabsTrigger value="pending">Pending</TabsTrigger>
           <TabsTrigger value="decline">Decline</TabsTrigger>
+          <TabsTrigger value="sickleave">Sick Leave</TabsTrigger>
+          <TabsTrigger value="medicalleave">Medical Leave</TabsTrigger>
+          <TabsTrigger value="shortleave">Short Leave</TabsTrigger>
+          <TabsTrigger value="annualleave">Annual Leave</TabsTrigger>
         </TabsList>
         <TabsContent
           value="all"
@@ -72,7 +73,44 @@ export default async function DemoPage() {
             data={data.filter((d) => d.status === "decline")}
           />
         </TabsContent>
+        <TabsContent
+          value="sickleave"
+          className=" max-h-[110vh] overflow-scroll scroll-smooth border rounded-md no-scrollbar"
+        >
+          <DataTable
+            columns={columns}
+            data={data.filter((d) => d.type === "Sick Leave")}
+          />
+        </TabsContent>
+        <TabsContent
+          value="medicalleave"
+          className=" max-h-[110vh] overflow-scroll scroll-smooth border rounded-md no-scrollbar"
+        >
+          <DataTable
+            columns={columns}
+            data={data.filter((d) => d.type === "Medical Leave")}
+          />
+        </TabsContent>
+        <TabsContent
+          value="shortleave"
+          className=" max-h-[110vh] overflow-scroll scroll-smooth border rounded-md no-scrollbar"
+        >
+          <DataTable
+            columns={columns}
+            data={data.filter((d) => d.type === "Short Leave")}
+          />
+        </TabsContent>
+        <TabsContent
+          value="annualleave"
+          className=" max-h-[110vh] overflow-scroll scroll-smooth border rounded-md no-scrollbar"
+        >
+          <DataTable
+            columns={columns}
+            data={data.filter((d) => d.type === "Annual Leave")}
+          />
+        </TabsContent>
       </Tabs>
     </div>
   );
 }
+

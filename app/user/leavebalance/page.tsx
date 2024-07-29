@@ -26,15 +26,15 @@ const LeaveBalance = () => {
           ))}
         </div> */}
         <div className="flex flex-wrap items-center max-md:ml-4 my-4 justify-evenly gap-5 w-full pb-2 pr-7  ">
-          {bal.map((itmes) => (
+        {bal.map((itmes) => (
             <div
-              className=" w-[20rem] h-[20rem] md:w-[16rem] rounded-full md:h-[16rem] flex flex-col  justify-center items-center  p-4 transition-all duration-150  shadow-md dark:shadow-white  cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white"
+              className=" max-[920px]:w-[18rem] max-[920px]:h-[18rem] max-[770px]:h-[16rem] max-[640px]:h-[12rem] max-[433px]:h-[18rem] max-[433px]:w-[18rem] max-[640px]:w-[12rem] max-[770px]:w-[16rem]  w-[12rem] h-[12rem]  flex flex-col  justify-center items-center  p-4 transition-all duration-150  shadow-md dark:shadow-white rounded-full cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white"
             
             >
-              <p className=" font-bold text-xl md:text-2xl ">
+              <p className=" font-bold text-xl ">
                 {itmes.leaveType}
               </p>
-              <h1 className="md:text-lg mt-2 text-md text-gray-600 font-bold">
+              <h1 className=" mt-2 text-md text-gray-600 font-bold">
                 {itmes.used} /{" "}
                 <span className="font-semibold">{itmes.total}</span>{" "}
                 <span>days</span>

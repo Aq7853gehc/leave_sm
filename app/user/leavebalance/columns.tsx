@@ -13,7 +13,7 @@ import { BiDownArrow } from "react-icons/bi";
 export const balanceColumns: ColumnDef<Balance>[] = [
   {
     accessorKey: "leaveType",
-    header: () => <div className="text-black dark:text-white font-bold">Leave Type</div>,
+    header: () => <div className="text-black dark:text-white dark:bg-red font-bold">Leave Type</div>,
   },
   {
     accessorKey: "used",
