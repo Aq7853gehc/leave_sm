@@ -4,6 +4,7 @@ type Balance = {
   total: number;
   text: string;
   rules:string;
+  value:string;
 };
 
 interface Chart {
@@ -24,3 +25,9 @@ type LeavesHistory = {
   enddate:string
   duration:number
 };
+
+type Faculty = {
+  name:string,
+  phone:number,
+  email:string
+}

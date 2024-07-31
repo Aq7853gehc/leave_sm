@@ -8,7 +8,7 @@ import Image from "next/image";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { DataTable } from "../leavebalance/data-table";
 import { balanceColumns } from "../leavebalance/columns";
-import { bal } from "@/constants/data";
+import { bal, faculty } from "@/constants/data";
 
 interface FormData {
   leaveType: string;
@@ -19,6 +19,7 @@ interface FormData {
   startTime: string;
   endTime: string;
   document: File | null; // Changed to File or null
+  faculty: string;
 }
 
 const LeaveRequest: React.FC = () => {
@@ -31,6 +32,7 @@ const LeaveRequest: React.FC = () => {
     startTime: "",
     endTime: "",
     document: null,
+    faculty: "",
   });
 
   const handleChange = (
@@ -61,6 +63,14 @@ const LeaveRequest: React.FC = () => {
       leaveType: event.target.value,
     }));
   };
+  const handleFacultyChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      faculty: event.target.value,
+    }));
+  };
 
   return (
     <div className="h-screen w-full flex flex-col ">
@@ -68,7 +78,7 @@ const LeaveRequest: React.FC = () => {
       <p className="text-base text-gray-500">Here apply for leaves</p>
       <Separator className="mb-1" />
       <div className="flex w-full h-full    px-3 justify-around">
-        <div className="w-full max-w-2xl  sm:max-w-3xl lg:max-w-2xl rounded border-gray-300 dark:border-input">
+        <div className="w-full max-w-2xl  sm:max-w-3xl lg:max-w-3xl rounded border-gray-300 dark:border-input">
           <form className="">
             <div className="mb-3">
               <label
@@ -84,20 +94,10 @@ const LeaveRequest: React.FC = () => {
                 value={formData.leaveType}
                 onChange={handleLeaveTypeChange}
               >
-                <option value="">Select Leave Type</option>
-                <option value="annual">Annual Leave</option>
-                <option value="sick">Sick Leave</option>
-                <option value="maternity">Maternity Leave</option>
-                <option value="paternity">Paternity Leave</option>
-                <option value="parental">Parental Leave</option>
-                <option value="half">Half Day Leave</option>
-                <option value="compassionate">Compassionate Leave</option>
-                <option value="personal">Personal Leave</option>
-                <option value="short">Short Leave</option>
-                <option value="study">Study Leave</option>
-                <option value="medical">Medical Leave</option>
-                <option value="publicHoliday">Public Holiday Leave</option>
-                <option value="others">Others</option>
+                <option value={""}>Select the leave type</option>
+                {bal.map((i) => (
+                  <option value={i.value}>{i.leaveType}</option>
+                ))}
               </select>
             </div>
             <div className="-mx-3 flex flex-wrap">
@@ -222,6 +222,11 @@ const LeaveRequest: React.FC = () => {
                 </div>
               </div>
             </div>
+            {/* Class Arrangement */}
+            <div className="my-2 pt-2 flex flex-col gap-3">
+              <label>Class Arrangement</label>
+             <ClassArrang fa={formData.faculty} handle={handleFacultyChange} />
+            </div>
             <div className="mt-8 flex flex-wrap md:justify-between  flex-col gap-5 ">
               <Button variant="destructive" type="reset">
                 Cancel Request
@@ -238,7 +243,7 @@ const LeaveRequest: React.FC = () => {
             </div>
           </form>
         </div>
-        <div className="rounded-md w-fit hidden md:block">
+        <div className="rounded-md w-fit hidden lg:flex h-fit">
           {/* <Image
             src={"/request.svg"}
             alt="img"
@@ -254,3 +259,29 @@ const LeaveRequest: React.FC = () => {
 };
 
 export default LeaveRequest;
+type ClassProps = {
+  fa:string,
+  handle:(e:React.ChangeEvent<HTMLSelectElement>)=>void
+}
+const ClassArrang = ({fa,handle}:ClassProps) => (
+  <div className="grid grid-cols-1 md:grid-cols-5 ">
+    <div>
+      <select
+        className="w-full h-10 rounded-md border border-input bg-background py-1.5 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md"
+        name="faculty"
+        id="faculty"
+        value={fa}
+        onChange={handle}
+      >
+        <option value={""}>Faculty</option>
+        {faculty.map((i) => (
+          <option value={i.name}>{i.name}</option>
+        ))}
+      </select>
+    </div>
+    <Input type="text" placeholder="Course" />
+    <Input type="text" placeholder="Subject Code" />
+    <Input type="text" placeholder="Subject Name" />
+    <Input type="time" />
+  </div>
+);
