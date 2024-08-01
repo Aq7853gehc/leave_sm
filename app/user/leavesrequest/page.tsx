@@ -21,7 +21,6 @@ interface FormData {
   document: File | null; // Changed to File or null
   faculty: string;
 }
-
 const LeaveRequest: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     leaveType: "",
@@ -34,7 +33,6 @@ const LeaveRequest: React.FC = () => {
     document: null,
     faculty: "",
   });
-
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -44,7 +42,6 @@ const LeaveRequest: React.FC = () => {
       [name]: value,
     }));
   };
-
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, files } = e.target;
     if (files && files.length > 0) {
@@ -54,28 +51,35 @@ const LeaveRequest: React.FC = () => {
       }));
     }
   };
-
   const handleLeaveTypeChange = (
     event: React.ChangeEvent<HTMLSelectElement>
+   
   ) => {
+  
     setFormData((prevState) => ({
       ...prevState,
       leaveType: event.target.value,
     }));
   };
+
+  const [faculties, setFaculties] = useState([{ faculty: "" },{faculty:""}]);
   const handleFacultyChange = (
+    index: number,
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      faculty: event.target.value,
-    }));
+    const newFaculties = [...faculties];
+    newFaculties[index].faculty = event.target.value;
+    setFaculties(newFaculties);
   };
 
-  const [count, setCount] = useState(1)
-
+  const addFaculty = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setFaculties([...faculties, { faculty: "" }]);
+    console.log(faculties)
+  };
+  const [count, setCount] = useState(1);
   return (
-    <div className="h-screen mb-2 overflow-y-scroll no-scrollbar w-full flex flex-col ">
+    <div className="h-screen w-full flex flex-col ">
       <h1 className="text-4xl font-bold">Leaves Request</h1>
       <p className="text-base text-gray-500">Here apply for leaves</p>
       <Separator className="mb-1" />
@@ -224,17 +228,26 @@ const LeaveRequest: React.FC = () => {
                 </div>
               </div>
             </div>
-            {/* Class Arrangement */}
+
             <div className="my-2 pt-2 flex flex-col gap-3">
               <label>Class Arrangement</label>
-              
-             <ClassArrang fa={formData.faculty} handle={handleFacultyChange} />
-             
-             <ClassArrang fa={formData.faculty} handle={handleFacultyChange} />
 
-             <div className="w-full h-fit py-5 rounded-md flex items-center justify-center text-center border-input border bg-background hover:bg-blue-900" onClick={()=>setCount((prev)=>prev++)}>
-              Add New Arrangement
-             </div>
+              <div className="flex flex-col gap-4">
+                {faculties.map((data, index) => (
+                  <ClassArrang
+                    key={index}
+                    fa={data.faculty}
+                    handle={(event) => handleFacultyChange(index, event)}
+                  />
+                ))}
+                <button
+                  onClick={addFaculty}
+                  className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md"
+                >
+                  Add Faculty
+                </button>
+              </div>
+
             </div>
             <div className="mt-8 flex flex-wrap md:justify-between  flex-col gap-5 ">
               <Button variant="destructive" type="reset">
@@ -271,14 +284,12 @@ export default LeaveRequest;
 
 
 
-
-
 type ClassProps = {
   fa:string,
   handle:(e:React.ChangeEvent<HTMLSelectElement>)=>void
 }
 const ClassArrang = ({fa,handle}:ClassProps) => (
-  <div className="grid grid-cols-1 md:grid-cols-5 gap-3 mt-2">
+  <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
     <div>
       <select
         className="w-full h-10 rounded-md border border-input bg-background py-1.5 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md"
@@ -289,7 +300,9 @@ const ClassArrang = ({fa,handle}:ClassProps) => (
       >
         <option value={""}>Faculty</option>
         {faculty.map((i) => (
-          <option value={i.name}>{i.name}</option>
+          <option key={i.name} value={i.name}>
+            {i.name}
+          </option>
         ))}
       </select>
     </div>
@@ -299,3 +312,5 @@ const ClassArrang = ({fa,handle}:ClassProps) => (
     <Input type="time" />
   </div>
 );
+
+
