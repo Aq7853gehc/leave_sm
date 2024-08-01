@@ -229,6 +229,7 @@ const LeaveRequest: React.FC = () => {
               <label>Class Arrangement</label>
               
              <ClassArrang fa={formData.faculty} handle={handleFacultyChange} />
+             
              <ClassArrang fa={formData.faculty} handle={handleFacultyChange} />
 
              <div className="w-full h-fit py-5 rounded-md flex items-center justify-center text-center border-input border bg-background hover:bg-blue-900" onClick={()=>setCount((prev)=>prev++)}>
