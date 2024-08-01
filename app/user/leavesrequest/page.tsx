@@ -75,7 +75,7 @@ const LeaveRequest: React.FC = () => {
   const [count, setCount] = useState(1)
 
   return (
-    <div className="h-screen w-full flex flex-col ">
+    <div className="h-screen mb-2 overflow-y-scroll no-scrollbar w-full flex flex-col ">
       <h1 className="text-4xl font-bold">Leaves Request</h1>
       <p className="text-base text-gray-500">Here apply for leaves</p>
       <Separator className="mb-1" />
@@ -278,7 +278,7 @@ type ClassProps = {
   handle:(e:React.ChangeEvent<HTMLSelectElement>)=>void
 }
 const ClassArrang = ({fa,handle}:ClassProps) => (
-  <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
+  <div className="grid grid-cols-1 md:grid-cols-5 gap-3 mt-2">
     <div>
       <select
         className="w-full h-10 rounded-md border border-input bg-background py-1.5 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md"

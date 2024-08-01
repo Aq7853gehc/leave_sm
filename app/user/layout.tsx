@@ -18,7 +18,7 @@ export default function User({ children }: { children: ReactNode }) {
     <ThemeProvider attribute="class" defaultTheme="dark">
       <main className="max-h-screen ">
         {/* mobile responsive */}
-        <div className=" flex md:hidden w-full border   bg-background justify-between items-center">
+        <div className=" flex md:hidden w-full border  bg-background justify-between items-center">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
