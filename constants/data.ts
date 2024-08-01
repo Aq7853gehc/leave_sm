@@ -39,6 +39,36 @@ export const bal: Balance[] = [
     value:"short"
     
   },
+  {
+    leaveType: "Short Leave",
+    used: 5,
+    total: 10,
+    text: "taken from this year",
+    rules:
+      "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
+    value:"short"
+    
+  },
+  {
+    leaveType: "Short Leave",
+    used: 5,
+    total: 10,
+    text: "taken from this year",
+    rules:
+      "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
+    value:"short"
+    
+  },
+  {
+    leaveType: "Short Leave",
+    used: 5,
+    total: 10,
+    text: "taken from this year",
+    rules:
+      "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
+    value:"short"
+    
+  },
   
 ];
 

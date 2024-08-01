@@ -72,13 +72,15 @@ const LeaveRequest: React.FC = () => {
     }));
   };
 
+  const [count, setCount] = useState(1)
+
   return (
     <div className="h-screen w-full flex flex-col ">
       <h1 className="text-4xl font-bold">Leaves Request</h1>
       <p className="text-base text-gray-500">Here apply for leaves</p>
       <Separator className="mb-1" />
       <div className="flex w-full h-full    px-3 justify-around">
-        <div className="w-full max-w-2xl  sm:max-w-3xl lg:max-w-3xl rounded border-gray-300 dark:border-input">
+        <div className="w-full max-w-2xl flex-1 sm:max-w-3xl lg:max-w-3xl rounded border-gray-300 dark:border-input">
           <form className="">
             <div className="mb-3">
               <label
@@ -225,7 +227,14 @@ const LeaveRequest: React.FC = () => {
             {/* Class Arrangement */}
             <div className="my-2 pt-2 flex flex-col gap-3">
               <label>Class Arrangement</label>
+              
              <ClassArrang fa={formData.faculty} handle={handleFacultyChange} />
+             
+             <ClassArrang fa={formData.faculty} handle={handleFacultyChange} />
+
+             <div className="w-full h-fit py-5 rounded-md flex items-center justify-center text-center border-input border bg-background hover:bg-blue-900" onClick={()=>setCount((prev)=>prev++)}>
+              Add New Arrangement
+             </div>
             </div>
             <div className="mt-8 flex flex-wrap md:justify-between  flex-col gap-5 ">
               <Button variant="destructive" type="reset">
@@ -259,12 +268,17 @@ const LeaveRequest: React.FC = () => {
 };
 
 export default LeaveRequest;
+
+
+
+
+
 type ClassProps = {
   fa:string,
   handle:(e:React.ChangeEvent<HTMLSelectElement>)=>void
 }
 const ClassArrang = ({fa,handle}:ClassProps) => (
-  <div className="grid grid-cols-1 md:grid-cols-5 ">
+  <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
     <div>
       <select
         className="w-full h-10 rounded-md border border-input bg-background py-1.5 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md"
