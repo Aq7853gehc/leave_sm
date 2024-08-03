@@ -1,4 +1,3 @@
-
 "use client";
 import { Separator } from "@/components/ui/separator";
 import { columns } from "./columns";
@@ -12,14 +11,14 @@ export default async function DemoPage() {
   const data = await getData();
   return (
     <div className="mx-auto max-h-screen w-full px-2 h-full no-scrollbar scroll-smooth">
-      <div className="flex items-center justify-between ">
-        <div>
+      <div className="flex items-center lg:ml-48 max-lg:flex-col justify-between ">
+        <div className="flex w-full flex-col mt-4 justify-center items-center">
           <h1 className="text-4xl font-black ">Leave History</h1>
           <p className="font-medium text-base text-gray-400">
             This page is to view the leave history of the last year
           </p>
         </div>
-        <div>
+        <div className="w-64  max-md:w-full max-lg:flex max-lg:justify-center max-lg:items-center">
           <button
             className="bg-blue-500 p-3 rounded-lg text-white shadow"
             onClick={() => router.push("/user/leavebalance")}
@@ -29,8 +28,8 @@ export default async function DemoPage() {
         </div>
       </div>
       <Separator className="mb-2 mt-2" />
-      <Tabs defaultValue="all" className="">
-        <TabsList>
+      <Tabs defaultValue="all" className=""> 
+        <TabsList className="flex justify-center max-md:hidden items-center">
           <TabsTrigger value="all">All</TabsTrigger>
           <TabsTrigger value="approved">Approved</TabsTrigger>
           <TabsTrigger value="pending">Pending</TabsTrigger>
@@ -40,6 +39,16 @@ export default async function DemoPage() {
           <TabsTrigger value="shortleave">Short Leave</TabsTrigger>
           <TabsTrigger value="annualleave">Annual Leave</TabsTrigger>
         </TabsList>
+        <TabsList className="flex flex-wrap w-full h-[128px] justify-center items-center md:hidden">
+          <TabsTrigger value="all">All</TabsTrigger>
+          <TabsTrigger value="approved">Approved</TabsTrigger>
+          <TabsTrigger value="pending">Pending</TabsTrigger>
+          <TabsTrigger value="decline">Decline</TabsTrigger>
+          <TabsTrigger value="sickleave">Sick Leave</TabsTrigger>
+          <TabsTrigger value="medicalleave">Medical Leave</TabsTrigger>
+          <TabsTrigger value="shortleave">Short Leave</TabsTrigger>
+          <TabsTrigger value="annualleave">Annual Leave</TabsTrigger>
+          </TabsList>
         <TabsContent
           value="all"
           className="max-h-[110vh] overflow-scroll scroll-smooth border rounded-md no-scrollbar "
@@ -113,4 +122,3 @@ export default async function DemoPage() {
     </div>
   );
 }
-

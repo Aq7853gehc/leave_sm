@@ -10,15 +10,19 @@ import { CarouselDemo } from "@/components/Carousel";
 const Users = () => {
   const routes = useRouter();
   return (
-    <section className=" flex flex-col  w-full pt-2 h-screen overflow-x-hidden no-scrollbar">
-      <div className="flex sm:flex-row justify-between items-center sm:pr-3 flex-col sm:px-4 pr-5">
-        <h1 className="sm:text-4xl mt-2 text-3xl font-bold ">Dashboard</h1>
-        <p
-          onClick={() => routes.push("/user/leavesrequest")}
-          className="text-sm border p-2 cursor-pointer rounded-lg  bg-blue-500 text-white w-fit"
-        >
-          Apply for leaves
-        </p>
+    <section className=" flex flex-col w-full pt-2 h-screen overflow-x-hidden no-scrollbar">
+      <div className="flex max-md:flex-col max-md:gap-4 max-md:justify-center max-md:items-center">
+        <div className="flex w-full flex-col md:ml-48 justify-center items-center">
+          <h1 className="sm:text-4xl mt-2 text-3xl font-bold ">Dashboard</h1>
+        </div>
+        <div className="w-64 flex justify-center items-center">
+          <p
+            onClick={() => routes.push("/user/leavesrequest")}
+            className="text-sm border p-2 cursor-pointer rounded-lg  bg-blue-500 text-white w-fit"
+          >
+            Apply for leaves
+          </p>
+        </div>
       </div>
       <Separator className="my-2" />
       <div className="flex flex-wrap items-center max-md:ml-4 justify-evenly gap-5 w-full max-sm:hidden pb-2 pr-7  ">

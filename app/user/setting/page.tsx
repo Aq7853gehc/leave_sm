@@ -201,10 +201,12 @@ const Setting = () => {
   const [edit, setEdit] = useState<boolean>(true);
   return (
     <div className="flex flex-col w-full max-w-screen max-h-screen h-full  no-scrollbar">
-      <h1 className="text-4xl mt-2 ml-5 font-black">Settings</h1>
-      <p className="text-base ml-5 text-gray-500">
-        Here you make changes according to your prefrence
-      </p>
+      <div className="flex w-full flex-col text-center justify-center items-center">
+        <h1 className="text-4xl mt-2 ml-5 font-black">Settings</h1>
+        <p className="text-base ml-5 text-gray-500">
+          Here you make changes according to your prefrence
+        </p>
+      </div>
       <Separator className="my-2" />
       <div className="  w-full h-full rounded-lg max-h-screen  overflow-scroll no-scrollbar">
         <div className="ml-5 shadow-md dark:shadow-white border mb-8 rounded-lg p-5 mr-5">

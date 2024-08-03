@@ -53,15 +53,6 @@ export const bal: Balance[] = [
       "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
     value: "short",
   },
-  {
-    leaveType: "Short Leave",
-    used: 5,
-    total: 10,
-    text: "taken from this year",
-    rules:
-      "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
-    value: "short",
-  },
 ];
 
 export const faculty: Faculty[] = [
@@ -89,7 +80,6 @@ export const faculty: Faculty[] = [
     phone: 2337894789,
     email: "aamm@gmail.com",
   },
-  
 ];
 
 export const chart: Chart = {
@@ -157,3 +147,43 @@ export const courses: Course[] = [
     section: 1,
   },
 ];
+
+export const leaveType = [
+  {
+    leaveType:"Annual Leave",
+    value:"annual",
+  },
+  {
+    leaveType:"Medical Leave",
+    value:"medical",
+  },
+  {
+    leaveType:"Professional Development Leave",
+    value:"professional",
+  },
+  {
+    leaveType:"Paternity Leave",
+    value:"paternity",
+  },
+  {
+    leaveType:"Maternity Leave",
+    value:"maternity",
+  },
+  {
+    leaveType:"Short Leave",
+    value:"short",
+  },
+  {
+    leaveType:"Study Leave",
+    value:"study",
+  },
+  {
+    leaveType:"Sick Leave",
+    value:"sick",
+  },
+  {
+    leaveType:"Personal Leave",
+    value:"personal",
+  },
+
+]

@@ -6,10 +6,12 @@ import React from "react";
 const Profile = () => {
   return (
     <section className=" flex flex-col w-full relative px-2 max-h-screen  no-scrollbar">
-      <h1 className="text-4xl font-bold ">Profile</h1>
-      <Separator className="mb-1" />
-      
-      <ProfileAI/>
+      <div className="flex mb-4 w-full flex-col mt-4 justify-center items-center">
+        <h1 className="text-4xl font-bold ">Profile</h1>
+      </div>
+      <Separator className="mb-4" />
+
+      <ProfileAI />
     </section>
   );
 };

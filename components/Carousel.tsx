@@ -11,13 +11,13 @@ import { bal } from "@/constants/data";
 export function CarouselDemo() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <Carousel className=" max-w-xs   m-2">
+      <Carousel className="max-w-[280px]">
         <CarouselPrevious />
         <CarouselContent>
           {bal.map((items) => (
             <CarouselItem>
               <div className="p-1">
-                <Card className="shadow-md rounded-full w-[300px] h-[300px] flex justify-center items-center flex-col border-none dark:shadow-white/50 dark:bg-black">
+                <Card className="shadow-md rounded-full w-[270px] h-[270px] flex justify-center items-center flex-col border-none dark:shadow-white/50 dark:bg-black">
                   <CardContent className="flex flex-col items-center justify-center ">
                     <div className="flex flex-col items-center p-5 max-[400px]:my-8 my-12 justify-center">
                       <p className=" font-bold text-lg">{items.leaveType}</p>

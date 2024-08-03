@@ -69,7 +69,7 @@ const ProfileAI = () => {
 
   return (
     <div>
-      <div className="max-h-[92vh] overflow-scroll no-scrollbar">
+      <div className="max-h-[92vh]  overflow-scroll no-scrollbar">
         <div>
           <div className="mb-3 border shadow-md dark:shadow-white sm:p-4 sm:pl-8 p-2 rounded-lg ">
             <h2 className="text-2xl font-bold max-md:text-xl mb-2  dark:text-blue-100">
@@ -192,7 +192,8 @@ const ProfileAI = () => {
             </div>
           ))}
         </div> */}
-        <div className="sm:mb-3 border shadow-md dark:shadow-white  sm:p-4  sm:pl-8 p-2 rounded-lg">
+     
+     <div className="mb-3 border sm:p-2 sm:pl-8 p-2 shadow-md dark:shadow-white  rounded-lg">
           <h2 className="text-2xl max-md:text-xl font-bold   mb-2">
             Education Information
           </h2>

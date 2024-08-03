@@ -8,7 +8,7 @@ import Image from "next/image";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { DataTable } from "../leavebalance/data-table";
 import { balanceColumns } from "../leavebalance/columns";
-import { bal, courses, faculty } from "@/constants/data";
+import { bal, courses, leaveType, faculty } from "@/constants/data";
 import {
   Select,
   SelectContent,
@@ -26,7 +26,7 @@ interface FormData {
   leaveReason: string;
   startTime: string;
   endTime: string;
-  document: File | null; // Changed to File or null
+  document: File | null;
   faculty: string;
 }
 const LeaveRequest: React.FC = () => {
@@ -68,10 +68,7 @@ const LeaveRequest: React.FC = () => {
     }));
   };
 
-  const [faculties, setFaculties] = useState([
-    { faculty: "" },
-    { faculty: "" },
-  ]);
+  const [faculties, setFaculties] = useState([{ faculty: "" }]);
   const handleFacultyChange = (
     index: number,
     event: React.ChangeEvent<HTMLSelectElement>
@@ -97,10 +94,12 @@ const LeaveRequest: React.FC = () => {
 
   return (
     <div className="h-screen w-full flex flex-col overflow-scroll pb-2 no-scrollbar">
-      <h1 className="text-4xl font-bold">Leaves Request</h1>
-      <p className="text-base text-gray-500">Here apply for leaves</p>
+      <div className="flex w-full flex-col justify-center items-center">
+        <h1 className="text-4xl font-bold">Leaves Application</h1>
+        <p className="text-base text-gray-500">Here apply for leaves</p>
+      </div>
       <Separator className="mb-1" />
-      <div className="flex w-full h-full    px-3 justify-around">
+      <div className="flex w-full h-full px-3 justify-around">
         <div className="w-full max-w-2xl flex-1 sm:max-w-3xl lg:max-w-3xl rounded border-gray-300 dark:border-input">
           <form className="">
             <div className="mb-3">
@@ -118,7 +117,7 @@ const LeaveRequest: React.FC = () => {
                 onChange={handleLeaveTypeChange}
               >
                 <option value={""}>Select the leave type</option>
-                {bal.map((i) => (
+                {leaveType.map((i) => (
                   <option value={i.value}>{i.leaveType}</option>
                 ))}
               </select>
