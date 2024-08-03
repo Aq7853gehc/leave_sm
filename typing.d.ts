@@ -27,7 +27,13 @@ type LeavesHistory = {
 };
 
 type Faculty = {
+  id:string,
   name:string,
   phone:number,
   email:string
+}
+
+type Course = {
+  name:string,
+  section:number,
 }

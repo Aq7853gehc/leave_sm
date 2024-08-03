@@ -8,7 +8,15 @@ import Image from "next/image";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { DataTable } from "../leavebalance/data-table";
 import { balanceColumns } from "../leavebalance/columns";
-import { bal, faculty } from "@/constants/data";
+import { bal, courses, faculty } from "@/constants/data";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { MdDelete } from "react-icons/md";
 
 interface FormData {
   leaveType: string;
@@ -53,16 +61,17 @@ const LeaveRequest: React.FC = () => {
   };
   const handleLeaveTypeChange = (
     event: React.ChangeEvent<HTMLSelectElement>
-   
   ) => {
-  
     setFormData((prevState) => ({
       ...prevState,
       leaveType: event.target.value,
     }));
   };
 
-  const [faculties, setFaculties] = useState([{ faculty: "" },{faculty:""}]);
+  const [faculties, setFaculties] = useState([
+    { faculty: "" },
+    { faculty: "" },
+  ]);
   const handleFacultyChange = (
     index: number,
     event: React.ChangeEvent<HTMLSelectElement>
@@ -75,11 +84,19 @@ const LeaveRequest: React.FC = () => {
   const addFaculty = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setFaculties([...faculties, { faculty: "" }]);
-    console.log(faculties)
+    console.log(faculties);
   };
-  const [count, setCount] = useState(1);
+  const deleteFaculty = (
+    index: number,
+    e: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    e.preventDefault();
+    setFaculties(faculties.filter((_, i) => i !== index));
+    console.log(faculties);
+  };
+
   return (
-    <div className="h-screen w-full flex flex-col ">
+    <div className="h-screen w-full flex flex-col overflow-scroll pb-2 no-scrollbar">
       <h1 className="text-4xl font-bold">Leaves Request</h1>
       <p className="text-base text-gray-500">Here apply for leaves</p>
       <Separator className="mb-1" />
@@ -105,6 +122,19 @@ const LeaveRequest: React.FC = () => {
                   <option value={i.value}>{i.leaveType}</option>
                 ))}
               </select>
+
+              {/* I want to integrate with shadcn but not work here if you find out */}
+              {/* <Select onValueChange={handleLeaveTypeChange} defaultValue={formData.leaveType}>
+        <SelectTrigger >
+          <SelectValue placeholder="Select Leave Type" />
+        </SelectTrigger>
+        <SelectContent> 
+        
+          {bal.map((i)=>(
+            <SelectItem value={i.value}>{i.leaveType}</SelectItem>
+          ))}
+        </SelectContent>
+      </Select> */}
             </div>
             <div className="-mx-3 flex flex-wrap">
               <div className="w-full px-3 sm:w-1/2">
@@ -229,25 +259,32 @@ const LeaveRequest: React.FC = () => {
               </div>
             </div>
 
-            <div className="my-2 pt-2 flex flex-col gap-3">
+            <div className="my-2 py-2 flex flex-col gap-3  ">
               <label>Class Arrangement</label>
 
               <div className="flex flex-col gap-4">
                 {faculties.map((data, index) => (
-                  <ClassArrang
-                    key={index}
-                    fa={data.faculty}
-                    handle={(event) => handleFacultyChange(index, event)}
-                  />
+                  <div className="flex gap-2">
+                    <ClassArrang
+                      key={index}
+                      fa={data.faculty}
+                      handle={(event) => handleFacultyChange(index, event)}
+                    />
+                    <Button
+                      variant={"destructive"}
+                      onClick={(e) => deleteFaculty(index, e)}
+                    >
+                      <MdDelete />
+                    </Button>
+                  </div>
                 ))}
                 <button
                   onClick={addFaculty}
-                  className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md"
+                  className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-md"
                 >
                   Add Faculty
                 </button>
               </div>
-
             </div>
             <div className="mt-8 flex flex-wrap md:justify-between  flex-col gap-5 ">
               <Button variant="destructive" type="reset">
@@ -282,35 +319,46 @@ const LeaveRequest: React.FC = () => {
 
 export default LeaveRequest;
 
-
-
 type ClassProps = {
-  fa:string,
-  handle:(e:React.ChangeEvent<HTMLSelectElement>)=>void
-}
-const ClassArrang = ({fa,handle}:ClassProps) => (
+  fa: string;
+  handle: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+};
+const ClassArrang = ({ fa, handle }: ClassProps) => (
   <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
     <div>
-      <select
-        className="w-full h-10 rounded-md border border-input bg-background py-1.5 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-blue-600 focus:shadow-md"
-        name="faculty"
-        id="faculty"
-        value={fa}
-        onChange={handle}
-      >
-        <option value={""}>Faculty</option>
-        {faculty.map((i) => (
-          <option key={i.name} value={i.name}>
-            {i.name}
-          </option>
-        ))}
-      </select>
+      {/* shadcn select here */}
+
+      <Select>
+        <SelectTrigger>
+          <SelectValue placeholder="Faculty" />
+        </SelectTrigger>
+        <SelectContent>
+          {/* <SelectItem value="light">Light</SelectItem>
+          <SelectItem value="dark">Dark</SelectItem>
+          <SelectItem value="system">System</SelectItem> */}
+          {faculty.map((i) => (
+            <SelectItem value={i.name}>{i.name}</SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
     </div>
-    <Input type="text" placeholder="Course" />
+    <Select>
+      <SelectTrigger>
+        <SelectValue placeholder="Course" />
+      </SelectTrigger>
+      <SelectContent>
+        {/* <SelectItem value="light">Light</SelectItem>
+          <SelectItem value="dark">Dark</SelectItem>
+          <SelectItem value="system">System</SelectItem> */}
+        {courses.map((i) => (
+          <SelectItem value={i.name}>{i.name}</SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
+    {/* <Input type="text" placeholder="Course" /> */}
     <Input type="text" placeholder="Subject Code" />
     <Input type="text" placeholder="Subject Name" />
     <Input type="time" />
+    {/* <Button onClick={() => deleteFaculty(index)}>Delete</Button> */}
   </div>
 );
-
-

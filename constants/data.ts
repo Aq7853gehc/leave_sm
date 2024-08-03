@@ -6,8 +6,7 @@ export const bal: Balance[] = [
     text: "taken from this year",
     rules:
       "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
-    value:"annual"
-    
+    value: "annual",
   },
   {
     leaveType: "Annual Leave",
@@ -16,8 +15,7 @@ export const bal: Balance[] = [
     text: "taken from this year",
     rules:
       "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
-    value:"annual"
-    
+    value: "annual",
   },
   {
     leaveType: "Medical Leave",
@@ -26,8 +24,7 @@ export const bal: Balance[] = [
     text: "taken from this year",
     rules:
       "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
-    value:"medical"
-    
+    value: "medical",
   },
   {
     leaveType: "Short Leave",
@@ -36,8 +33,7 @@ export const bal: Balance[] = [
     text: "taken from this year",
     rules:
       "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
-    value:"short"
-    
+    value: "short",
   },
   {
     leaveType: "Short Leave",
@@ -46,8 +42,7 @@ export const bal: Balance[] = [
     text: "taken from this year",
     rules:
       "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
-    value:"short"
-    
+    value: "short",
   },
   {
     leaveType: "Short Leave",
@@ -56,8 +51,7 @@ export const bal: Balance[] = [
     text: "taken from this year",
     rules:
       "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
-    value:"short"
-    
+    value: "short",
   },
   {
     leaveType: "Short Leave",
@@ -66,19 +60,37 @@ export const bal: Balance[] = [
     text: "taken from this year",
     rules:
       "this the rule for causal leaves that you can only take 5 holiday addition is not allowed",
-    value:"short"
-    
+    value: "short",
+  },
+];
+
+export const faculty: Faculty[] = [
+  {
+    id: "1",
+    name: "Amandeep",
+    phone: 2337894789,
+    email: "aamm@gmail.com",
+  },
+  {
+    id: "2",
+    name: "Charan",
+    phone: 2337894789,
+    email: "aamm@gmail.com",
+  },
+  {
+    id: "3",
+    name: "Poonam",
+    phone: 2337894789,
+    email: "aamm@gmail.com",
+  },
+  {
+    id: "4",
+    name: "Vishal",
+    phone: 2337894789,
+    email: "aamm@gmail.com",
   },
   
 ];
-
-export const faculty:Faculty[]=[
-  {
-    name:"Amandeep",
-    phone:2337894789,
-    email:"aamm@gmail.com"
-  }
-]
 
 export const chart: Chart = {
   labels: ["Pending", "Approved", "Cancel"],
@@ -130,3 +142,18 @@ export const profile = {
   isActive: true,
   role: "REGULAR",
 };
+
+export const courses: Course[] = [
+  {
+    name: "BCA",
+    section: 1,
+  },
+  {
+    name: "Bcom",
+    section: 1,
+  },
+  {
+    name: "BBA",
+    section: 1,
+  },
+];

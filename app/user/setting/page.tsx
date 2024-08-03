@@ -195,7 +195,9 @@ import { MdContactSupport } from "react-icons/md";
 import { IoLogOut } from "react-icons/io5";
 import ListLeave from "@/components/ListLeave";
 import { profile } from "@/constants/data";
+import { useTheme } from "next-themes";
 const Setting = () => {
+  const { setTheme, theme } = useTheme();
   const [edit, setEdit] = useState<boolean>(true);
   return (
     <div className="flex flex-col w-full max-w-screen max-h-screen h-full  no-scrollbar">
@@ -342,9 +344,7 @@ const Setting = () => {
             <div className="flex max-sm:flex-col mt-5">
               <div className="w-full flex flex-col gap-2">
                 <div className="flex w-full max-lg:flex-col">
-                  <p className="lg:w-1/4 text-lg ">
-                    Email Notifications:
-                  </p>
+                  <p className="lg:w-1/4 text-lg ">Email Notifications:</p>
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" className="sr-only peer" />
                     <div className="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
@@ -369,6 +369,7 @@ const Setting = () => {
           </div>
         </div>
         <div className="ml-5 shadow-md dark:shadow-white border mb-8 rounded-lg p-5 mr-5">
+          {/* Aquib added functionality of theme  */}
           <div className="flex gap-1">
             <FaPalette className="text-3xl" />
             <h1 className="text-2xl ">Theme Setting</h1>
@@ -384,9 +385,16 @@ const Setting = () => {
                     name="theme"
                     value="light"
                     className="mr-4"
+                    onClick={() => setTheme("light")}
+                    defaultChecked={theme === "light"}
                   />
                   <label className="mr-2">Dark</label>
-                  <input type="radio" name="theme" value="dark" />
+                  <input
+                    type="radio"
+                    name="theme"
+                    onClick={() => setTheme("dark")}
+                    defaultChecked={theme === "dark"}
+                  />
                 </div>
               </div>
             </div>

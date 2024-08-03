@@ -159,7 +159,8 @@ const Iconbar = () => {
           </Tooltip>
         </TooltipProvider>
         {/* Theme Toggle icon */}
-        <ThemeToggle />
+        {path!=="/user/setting"&&(<ThemeToggle />)}
+        {/* <ThemeToggle /> */}
         {/* Logout icon  */}
         <TooltipProvider>
           <Tooltip>
