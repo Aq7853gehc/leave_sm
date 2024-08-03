@@ -1,18 +1,13 @@
-
 "use client";
 import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React, { useState } from "react";
 import { ImProfile } from "react-icons/im";
 import { MdAccountCircle } from "react-icons/md";
 import { IoMdNotifications } from "react-icons/io";
-import { VscLayoutActivitybarLeft } from "react-icons/vsc";
 import { FaPalette } from "react-icons/fa";
 import { SiGnuprivacyguard } from "react-icons/si";
 import { MdContactSupport } from "react-icons/md";
 import { IoLogOut } from "react-icons/io5";
-import ListLeave from "@/components/ListLeave";
-import { profile } from "@/constants/data";
 import { useTheme } from "next-themes";
 const Setting = () => {
   const { setTheme, theme } = useTheme();

@@ -1,5 +1,6 @@
 export const bal: Balance[] = [
   {
+    id:1,
     leaveType: "Annual Leave",
     used: 5,
     total: 10,
@@ -9,6 +10,7 @@ export const bal: Balance[] = [
     value: "annual",
   },
   {
+    id:2,
     leaveType: "Annual Leave",
     used: 5,
     total: 10,
@@ -18,6 +20,7 @@ export const bal: Balance[] = [
     value: "annual",
   },
   {
+    id:3,
     leaveType: "Medical Leave",
     used: 5,
     total: 10,
@@ -27,6 +30,7 @@ export const bal: Balance[] = [
     value: "medical",
   },
   {
+    id:4,
     leaveType: "Short Leave",
     used: 5,
     total: 10,
@@ -36,6 +40,7 @@ export const bal: Balance[] = [
     value: "short",
   },
   {
+    id:5,
     leaveType: "Short Leave",
     used: 5,
     total: 10,
@@ -45,6 +50,7 @@ export const bal: Balance[] = [
     value: "short",
   },
   {
+    id:6,
     leaveType: "Short Leave",
     used: 5,
     total: 10,

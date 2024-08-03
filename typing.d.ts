@@ -1,4 +1,5 @@
 type Balance = {
+  id:number
   leaveType: string;
   used: number;
   total: number;

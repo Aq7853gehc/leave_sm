@@ -28,8 +28,8 @@ export default async function DemoPage() {
         </div>
       </div>
       <Separator className="mb-2 mt-2" />
-      <Tabs defaultValue="all" className=""> 
-        <TabsList className="flex justify-center max-md:hidden items-center">
+      <Tabs defaultValue="all" className="">
+        <TabsList className="flex justify-center max-md:hidden items-center ">
           <TabsTrigger value="all">All</TabsTrigger>
           <TabsTrigger value="approved">Approved</TabsTrigger>
           <TabsTrigger value="pending">Pending</TabsTrigger>
@@ -39,7 +39,7 @@ export default async function DemoPage() {
           <TabsTrigger value="shortleave">Short Leave</TabsTrigger>
           <TabsTrigger value="annualleave">Annual Leave</TabsTrigger>
         </TabsList>
-        <TabsList className="flex flex-wrap w-full h-[128px] justify-center items-center md:hidden">
+        <TabsList className="flex flex-wrap  w-full h-[128px] justify-center items-center md:hidden">
           <TabsTrigger value="all">All</TabsTrigger>
           <TabsTrigger value="approved">Approved</TabsTrigger>
           <TabsTrigger value="pending">Pending</TabsTrigger>
@@ -48,7 +48,7 @@ export default async function DemoPage() {
           <TabsTrigger value="medicalleave">Medical Leave</TabsTrigger>
           <TabsTrigger value="shortleave">Short Leave</TabsTrigger>
           <TabsTrigger value="annualleave">Annual Leave</TabsTrigger>
-          </TabsList>
+        </TabsList>
         <TabsContent
           value="all"
           className="max-h-[110vh] overflow-scroll scroll-smooth border rounded-md no-scrollbar "
