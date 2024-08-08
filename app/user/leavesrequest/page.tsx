@@ -263,7 +263,7 @@ const LeaveRequest: React.FC = () => {
 
               <div className="flex flex-col gap-4">
                 {faculties.map((data, index) => (
-                  <div className="flex gap-2">
+                  <div className="flex max-lg:flex-col gap-2">
                     <ClassArrang
                       key={index}
                       fa={data.faculty}
@@ -273,7 +273,7 @@ const LeaveRequest: React.FC = () => {
                       variant={"destructive"}
                       onClick={(e) => deleteFaculty(index, e)}
                     >
-                      <MdDelete />
+                      <MdDelete className="max-lg:text-3xl"/>
                     </Button>
                   </div>
                 ))}
