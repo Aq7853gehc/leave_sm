@@ -1,11 +1,11 @@
 "use client";
-import DisplayTable from "@/app/components/DisplayTable";
+import DisplayTable from "@/components/DisplayTable";
 import { LeaveTypeReqeuest, TableColumnType } from "../../adminTypes";
 import { AiOutlineEdit } from "react-icons/ai";
 import Link from "next/link";
 import { IoMdEye } from "react-icons/io";
 import { useState } from "react";
-import Modal from "@/app/components/Modal";
+import Modal from "@/components/Modal";
 
 
 const employe = () => {

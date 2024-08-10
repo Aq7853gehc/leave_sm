@@ -1,5 +1,5 @@
 "use client";
-import DisplayTable from "@/app/components/DisplayTable";
+import DisplayTable from "@/components/DisplayTable";
 import { TableColumnType } from "../../adminTypes";
 const requests = [
   {
