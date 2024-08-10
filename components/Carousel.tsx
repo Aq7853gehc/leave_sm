@@ -14,11 +14,11 @@ export function CarouselDemo() {
       <Carousel className="max-w-[280px]">
         <CarouselPrevious />
         <CarouselContent>
-          {bal.map((items) => (
-            <CarouselItem>
-              <div className="p-1">
+          {bal.map((items,i) => (
+            <CarouselItem key={i}>
+              <div className="p-1" key={i}>
                 <Card className="shadow-md rounded-full w-[270px] h-[270px] flex justify-center items-center flex-col border-none dark:shadow-white/50 dark:bg-black">
-                  <CardContent className="flex flex-col items-center justify-center ">
+                  <CardContent className="flex flex-col items-center justify-center " key={i}>
                     <div className="flex flex-col items-center p-5 max-[400px]:my-8 my-12 justify-center">
                       <p className=" font-bold text-lg">{items.leaveType}</p>
                       <h1 className=" mt-2  text-lg  text-gray-600 font-bold">

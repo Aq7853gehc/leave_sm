@@ -5,12 +5,11 @@ import { Separator } from "@/components/ui/separator";
 import { bal } from "@/constants/data";
 import { useRouter } from "next/navigation";
 import React from "react";
-import LeaveHistory from "./leaveshistory/page";
 import { CarouselDemo } from "@/components/Carousel";
 const Users = () => {
   const routes = useRouter();
   return (
-    <section className=" flex flex-col w-full pt-2 h-screen overflow-x-hidden no-scrollbar">
+    <section className=" flex flex-col w-full pt-2 h-screen overflow-x-hidden no-scrollbar" >
       <div className="flex max-md:flex-col max-md:gap-4 max-md:justify-center max-md:items-center">
         <div className="flex w-full flex-col md:ml-48 justify-center items-center">
           <h1 className="sm:text-4xl mt-2 text-3xl font-bold ">Dashboard</h1>
@@ -26,9 +25,11 @@ const Users = () => {
       </div>
       <Separator className="my-2" />
       <div className="flex flex-wrap items-center max-md:ml-4 justify-evenly gap-5 w-full max-sm:hidden pb-2 pr-7  ">
-        {bal.map((itmes) => (
-          <div className=" max-[920px]:w-[18rem] max-[920px]:h-[18rem] max-[770px]:h-[16rem] max-[640px]:h-[12rem] max-[433px]:h-[18rem] max-[433px]:w-[18rem] max-[640px]:w-[12rem] max-[770px]:w-[16rem]  w-[12rem] h-[12rem]  flex flex-col  justify-center items-center  p-4 transition-all duration-150  shadow-md dark:shadow-white rounded-full cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white">
-            <p className=" font-bold text-xl ">{itmes.leaveType}</p>
+        {bal.map((itmes, i) => (
+          <div className=" max-[920px]:w-[18rem] max-[920px]:h-[18rem] max-[770px]:h-[16rem] max-[640px]:h-[12rem] max-[433px]:h-[18rem] max-[433px]:w-[18rem] max-[640px]:w-[12rem] max-[770px]:w-[16rem]  w-[12rem] h-[12rem]  flex flex-col  justify-center items-center  p-4 transition-all duration-150  shadow-md dark:shadow-white rounded-full cursor-pointer hover:shadow hover:border-black dark:hover:border-white dark:hover:shadow-white" key={i}>
+            <p className=" font-bold text-xl " >
+              {itmes.leaveType}
+            </p>
             <h1 className=" mt-2 text-md text-gray-600 font-bold">
               {itmes.used} /{" "}
               <span className="font-semibold">{itmes.total}</span>{" "}
@@ -70,7 +71,7 @@ const Users = () => {
               This is the list of recent applied with in 10 days
             </p>
           </div>
-          <ListLeave className="w-full" />
+          {/* <ListLeave /> */}
         </div>
       </div>
     </section>
