@@ -62,45 +62,45 @@ const Setting = () => {
               </div>
             </div>
           ) : (
-            <div className="flex  max-lg:flex-col mt-5">
+            <div className="flex  flex-col mt-5">
               <div className="w-full flex flex-col gap-2">
-                <div className="flex max-lg:flex-col">
+                <div className="flex flex-col">
                   <label className="w-1/2 text-lg ">Name:</label>
                   <input
                     type="text"
-                    className="p-2 lg:w-1/4 border dark:border-black  rounded-lg outline-none"
+                    className="p-2  border dark:border-black  rounded-lg outline-none"
                     placeholder="Saad Mehmood"
                   />
                 </div>
-                <div className="flex max-lg:flex-col">
+                <div className="flex flex-col">
                   <label className="w-1/2 text-lg ">DOB:</label>
                   <input
                     type="date"
-                    className="p-2 lg:w-1/4 border dark:border-black  rounded-lg outline-none"
+                    className="p-2  border dark:border-black  rounded-lg outline-none"
                     placeholder="17-05-2006"
                   />
                 </div>
-                <div className="flex max-lg:flex-col">
+                <div className="flex flex-col">
                   <label className="w-1/2 text-lg ">Gender:</label>
                   <input
                     type="text"
-                    className="p-2 lg:w-1/4 rounded-lg border dark:border-black  outline-none"
+                    className="p-2  rounded-lg border dark:border-black  outline-none"
                     placeholder="Male"
                   />
                 </div>
-                <div className="flex max-lg:flex-col">
+                <div className="flex flex-col">
                   <label className="w-1/2 text-lg ">Contact:</label>
                   <input
                     type="phone"
-                    className="p-2 lg:w-1/4 rounded-lg border dark:border-black  outline-none"
+                    className="p-2  rounded-lg border dark:border-black  outline-none"
                     placeholder="9783468480"
                   />
                 </div>
-                <div className="flex max-lg:flex-col">
+                <div className="flex flex-col">
                   <label className="w-1/2 text-lg ">Address:</label>
                   <input
                     type="text"
-                    className="p-2 lg:w-1/4 rounded-lg border dark:border-black  outline-none"
+                    className="p-2  rounded-lg border dark:border-black  outline-none"
                     placeholder="D-27, Shaheen Bagh Okhla"
                   />
                 </div>
@@ -109,7 +109,7 @@ const Setting = () => {
               <div className="sm:w-full max-sm:flex mt-2">
                 <button
                   onClick={() => setEdit(!edit)}
-                  className="text-white max-sm:w-full max-sm:mr-4 bg-blue-500 p-2 mr-4 rounded-sm "
+                  className="text-white w-full max-sm:mr-4 bg-blue-500 p-2 mr-4 rounded-sm "
                 >
                   Save Changes
                 </button>
