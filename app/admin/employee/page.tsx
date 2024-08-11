@@ -5,7 +5,7 @@ import Link from "next/link";
 import DisplayTable from "@/components/DisplayTable";
 import { RequestEmployeeType } from "../adminTypes";
 import { TableColumnType } from "../adminTypes";
-export const requests:RequestEmployeeType[] = [
+export const employee:RequestEmployeeType[] = [
   {
     id: 1,
     name: "Ali Samer",
@@ -383,7 +383,7 @@ const employe = () => {
    <>
       <DisplayTable
         columns={columns}
-        requests={requests}
+        requests={employee}
         heading={"Employee"}
         searchableFields={["name", "email", "city", "role", "status"]}
       />

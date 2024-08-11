@@ -1,13 +1,14 @@
 "use client";
 import DisplayTable from "@/components/DisplayTable";
-import { TableColumnType } from "../../adminTypes";
-const requests = [
+import { RequestHistory, TableColumnType } from "../../adminTypes";
+export const requests:RequestHistory[] = [
   {
     id: 1,
     employee: "Ali Samer",
     startDate: "22-2-2005",
     endDate: "22-2-2034",
     reason: "Family event",
+    duration:5,
     status: "PENDING",
   },
   {
@@ -16,6 +17,7 @@ const requests = [
     startDate: "15-3-2022",
     endDate: "20-3-2022",
     reason: "Vacation",
+    duration:5,
     status: "APPROVED",
   },
   {
@@ -24,6 +26,7 @@ const requests = [
     startDate: "10-1-2023",
     endDate: "15-1-2023",
     reason: "Medical leave",
+    duration:5,
     status: "REJECTED",
   },
   {
@@ -32,6 +35,7 @@ const requests = [
     startDate: "5-6-2024",
     endDate: "12-6-2024",
     reason: "Conference",
+    duration:5,
     status: "PENDING",
   },
   {
@@ -40,6 +44,7 @@ const requests = [
     startDate: "25-12-2024",
     endDate: "2-1-2025",
     reason: "New Year holiday",
+    duration:5,
     status: "APPROVED",
   },
   {
@@ -48,6 +53,7 @@ const requests = [
     startDate: "3-7-2024",
     endDate: "10-7-2024",
     reason: "Wedding",
+    duration:5,
     status: "PENDING",
   },
   {
@@ -56,6 +62,7 @@ const requests = [
     startDate: "10-11-2024",
     endDate: "15-11-2024",
     reason: "Business trip",
+    duration:5,
     status: "APPROVED",
   },
   {
@@ -64,6 +71,7 @@ const requests = [
     startDate: "20-8-2024",
     endDate: "25-8-2024",
     reason: "Vacation",
+    duration:5,
     status: "REJECTED",
   },
   {
@@ -72,6 +80,7 @@ const requests = [
     startDate: "1-5-2024",
     endDate: "5-5-2024",
     reason: "Personal reasons",
+    duration:5,
     status: "PENDING",
   },
   {
@@ -80,6 +89,7 @@ const requests = [
     startDate: "15-9-2024",
     endDate: "20-9-2024",
     reason: "Family reunion",
+    duration:5,
     status: "APPROVED",
   }
 ];

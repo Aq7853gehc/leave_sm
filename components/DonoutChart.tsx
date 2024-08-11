@@ -60,7 +60,7 @@ export function DonutChart({title}:{
   }, [])
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col min-w-[24rem]">
       <CardHeader className="items-center pb-0">
         <CardTitle>{title}</CardTitle>
       </CardHeader>
