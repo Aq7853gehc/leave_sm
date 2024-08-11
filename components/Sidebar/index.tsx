@@ -70,14 +70,14 @@ const Sidebar = () => {
         {/* List of Link */}
         <Link
           href={"/user"}
-          className={`${path === "/user" ? "dark:bg-blue-500 bg-blue-600 text-white" : null}`}
+          className={`a  ${path === "/user" ? "dark:bg-blue-500 bg-blue-600 text-white" : null}`}
         >
           <LuHome size={24} />
           Dashboard
         </Link>
         <Link
           href={"/user/profile"}
-          className={`${
+          className={`a ${
             path === "/user/profile" ? "text-white bg-blue-600 dark:bg-blue-500" : null
           }`}
         >
@@ -86,7 +86,7 @@ const Sidebar = () => {
         </Link>
         <Link
           href={"/user/leavesrequest"}
-          className={`${
+          className={`a ${
             path === "/user/leavesrequest" ? "text-white bg-blue-600 dark:bg-blue-500" : null
           }`}
         >
@@ -95,7 +95,7 @@ const Sidebar = () => {
         </Link>
         <Link
           href={"/user/leavebalance"}
-          className={`${path === "/user/leavebalance" ? "text-white bg-blue-600 dark:bg-blue-500" : null
+          className={`a ${path === "/user/leavebalance" ? "text-white bg-blue-600 dark:bg-blue-500" : null
             }`}
         >
           <Weight size={24} />
@@ -103,7 +103,7 @@ const Sidebar = () => {
         </Link>
         <Link
           href={"/user/leaveshistory"}
-          className={`${
+          className={`a ${
             path === "/user/leaveshistory" ? "dark:bg-blue-500 bg-blue-600 text-white" : null
           } `}
         >
@@ -113,14 +113,14 @@ const Sidebar = () => {
         
         <Link
           href={"/user/setting"}
-          className={` ${
+          className={`a  ${
             path === "/user/setting" ? "dark:bg-blue-500 bg-blue-600 text-white" : null
           }  `}
         >
           <IoSettingsOutline size={24} />
           Setting
         </Link>
-        <Link href={"/login"} className={`   `}>
+        <Link href={"/login"} className={`a    `}>
           <BiLogOut size={24} />
           Logout
         </Link>

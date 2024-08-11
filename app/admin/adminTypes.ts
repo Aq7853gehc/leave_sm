@@ -4,7 +4,7 @@ export interface RequestEmployeeType {
     email: string;
     city: string;
     role: string;
-    status: string;
+    status: 'Active'|'Inactive';
     action: JSX.Element[];
   }
 

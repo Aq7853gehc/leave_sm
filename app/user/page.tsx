@@ -64,14 +64,14 @@ const Users = () => {
           </div>
           <ChartDemo className="mt-5 md:w-[30rem] w-[20rem] h-[20rem] flex items-center justify-center text-center md:h-[25rem] " />
         </div>
-        <div className="w-full flex gap-5 justify-center items-center flex-col px-4  py-4">
+        <div className="w-full flex gap-5 justify-center items-center flex-1 flex-col px-4  py-4">
           <div className="w-full flex justify-center items-center flex-col relative">
             <h1 className="sm:text-4xl text-2xl font-bold ">Recent Applied </h1>
             <p className="md:text-lg text-sm">
               This is the list of recent applied with in 10 days
             </p>
           </div>
-          {/* <ListLeave /> */}
+          <ListLeave className="w-full"/>
         </div>
       </div>
     </section>

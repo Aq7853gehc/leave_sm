@@ -6,7 +6,7 @@ import { getData } from '@/constants/leavesdata'
 import { cn } from '@/lib/utils'
 import React from 'react'
 
-const ListLeave = async({className}:{className:string}) => {
+const ListLeave = async({className}:{className?:string}) => {
   try {
     const data =  await getData()
     return (

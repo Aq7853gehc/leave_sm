@@ -192,9 +192,9 @@ const Sidebar = () => {
             );
           })}
           <div className="absolute left-0 bottom-6 py-5 w-[16rem] flex justify-center items-center">
-            <button className="w-[14rem] border active border-slate-400 box active flex justify-center">
+            <Link className="w-[14rem] border active border-slate-400 box active flex justify-center" href={"/adminLogin"}>
               Logout
-            </button>
+            </Link>
           </div>
         </div>
       </div>
