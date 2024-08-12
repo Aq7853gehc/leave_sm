@@ -5,7 +5,7 @@ import { FaCheckSquare } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gradient-to-r from-gray-500 via-white to-red-400">
+    <div className="min-h-screen flex flex-col items-center ">
       <Head>
         <title>Leave Management System</title>
         <meta

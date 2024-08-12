@@ -318,7 +318,7 @@ const LoginForm = () => {
           </button>
           {serverError && <p className='text-red-500 text-center mt-4'>{serverError}</p>}
           <div className='flex justify-center mt-4'>
-            <Link href="/frontend/forgot-password">
+            <Link href="/forgot-password">
               <p className='text-sm text-blue-500 hover:text-blue-600 transition duration-300'>Forgot Password?</p>
             </Link>
           </div>
